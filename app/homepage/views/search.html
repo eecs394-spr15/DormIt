@@ -1,0 +1,50 @@
+<div ng-controller="SearchController">
+
+    <super-navbar>
+        <super-navbar-title>
+            Search
+        </super-navbar-title>
+    </super-navbar>
+
+    <div class="padding">
+        <h3>Filter here！</h3>
+        <div class="item item-input-inset">
+        <label class="item item-input-wrapper">
+            <input type="text" placeholder="Key words">
+        </label>
+            <button class="button button-royal icon-right super-search"></button>
+        </div><hr>
+        <h3>Category</h3>
+
+        <ul class="list">
+            <li class="item item-checkbox">
+                location:
+                    <input type="checkbox"> North
+                    <input type="checkbox"> South
+
+            </li>
+
+            <li class="item item-checkbox">
+                Type:
+                    <input type="checkbox"> Single
+                    <input type="checkbox"> Double
+            </li>
+
+            <li class="item item-checkbox">
+                Price:
+                    <input type="checkbox"> < 500
+                    <input type="checkbox"> 500-700
+                    <input type="checkbox"> > 700
+            </li>
+
+            <li class="item item-checkbox">
+                Stars:
+                <input type="checkbox"> > 4
+                <input type="checkbox"> 3-4
+                <input type="checkbox"> < 3
+            </li>
+        </ul>
+
+    </div>
+
+</div>
