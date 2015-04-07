@@ -24,4 +24,8 @@ module.exports =
       id: "search"
       location: "homepage#search"
     }
+    {
+      id: "index"
+      location: "homepage#index"
+    }
   ]
