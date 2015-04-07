@@ -1,0 +1,69 @@
+<div ng-controller="SearchController">
+
+    <super-navbar>
+        <super-navbar-title>
+            Search
+        </super-navbar-title>
+    </super-navbar>
+    <link rel="stylesheet" href="styles/search.css">
+
+
+    <div class="page">
+
+        <div class="searchbar item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Dorm Name">
+            </label>
+            <button class="button button-clear icon-right super-search"></button>
+        </div>
+
+        <h4>Category</h4>
+
+        <div >
+            <ul>
+                <li class="choice item item-checkbox">
+                    <strong>location</strong>:
+                    <input type="checkbox"> North
+                    <input type="checkbox"> South
+
+                </li>
+
+                <li class="choice item item-checkbox">
+                    <strong>Type</strong>:
+                    <input type="checkbox"> Single
+                    <input type="checkbox"> Double
+                </li>
+
+                <li class="choice item item-checkbox">
+                    <Strong>Price</Strong>:
+                    <input type="checkbox"> <500
+                    <input type="checkbox"> 500-700
+                    <input type="checkbox"> > 700
+                </li>
+
+                <li class="choice item item-checkbox">
+                    <strong>Stars</strong>:
+                    <input type="checkbox"> >4.5
+                    <input type="checkbox"> >3.5
+                    <input type="checkbox"> >2.5
+                </li>
+
+                <li class="choice item item-checkbox">
+                    <strong>Undergraduate only</strong>:
+                    <input type="checkbox"> Y
+                    <input type="checkbox"> N
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div >
+            <super-navigate view-id="index">
+                <button class="submit button-block button-positive">Submit</button>
+            </super-navigate>
+        </div>
+
+    </div>
+
+</div>
