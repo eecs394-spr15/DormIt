@@ -5,16 +5,8 @@ module.exports =
   rootView:
     location: "homepage#index"
 
-#preloads: [
-#  {
-#    id: "learn-more"
-#    location: "example#learn-more"
-#  }
-#  {
-#    id: "using-the-scanner"
-#    location: "example#using-the-scanner"
-#  }
-#]
+  # rootView:
+  #   location: "example#getting-started"
 
 # drawers:
 #   left:
@@ -27,3 +19,9 @@ module.exports =
 # initialView:
 #   id: "initialView"
 #   location: "example#initial-view"
+  preloads: [
+    {
+      id: "search"
+      location: "homepage#search"
+    }
+  ]
