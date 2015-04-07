@@ -6,102 +6,11 @@
     </super-navbar-title>
   </super-navbar>
 
-  <div class="list">
-  <style type="text/css">
+  <div class="list homepage">
 
-    .searchbar
-    {
-      width:90%;
-      height:34px;
-      background:rgb(239,250,205);
-      margin:4px 0px 18px 0px;
-      text-align:left;
-    }
-    .search
-    {
-      font-size:20px;
-      background:transparent;
-      border:0px;
-    }
-
-    .dorm
-    {
-      width:90%;
-      height:54px;
-      margin:4px 0px 4px 0px;
-      background:rgb(239,250,205);
-      vertical-align:top;
-      font-size:25px;
-    }
-
-    .homepage
-    {
-      width:100%;
-      height:100%;
-      padding:9px 14px 20px 14px;
-      background:purple
-    }
-
-    .row
-    {
-      position:relative;
-      display:inline;
-    }
-
-  </style>
-
-  <div class="homepage">
-    <div class="searchbar">
-      <button class="search">Search:</button>
-      <button class="search"></button>
-    </div>
-    <div class="row">
-      <button class="dorm">Allison
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Bobb
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Plex
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Ayers
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Jones
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Hinman
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Elder
-
-      </button>
-    </div>
-    <div class="row">
-      <button class="dorm">Slivka
-
-      </button>
-    </div>
-  <div class="padding">
-    <h3>Let's Dorm It!</h3>
-    <super-navigate view-id="search">
-      <button class="button-block button-positive">Search</button>
-    </super-navigate>
-   <!-- <button class="button button-block button-positive" ng-click="getPosition()">Get position</button>-->
-  </div>
+      <super-navigate view-id="search" action="click">
+        <button class="button button-full button-stable">Search</button>
+      </super-navigate>
 
     <a class="item item-thumbnail-left" href="#">
       <img src="http://www.northwestern.edu/living/housing-options/assets/sargent.jpg">
