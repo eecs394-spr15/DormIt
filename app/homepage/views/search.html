@@ -6,44 +6,95 @@
         </super-navbar-title>
     </super-navbar>
 
-    <div class="padding">
-        <h3>Filter here！</h3>
-        <div class="item item-input-inset">
-        <label class="item item-input-wrapper">
-            <input type="text" placeholder="Key words">
-        </label>
-            <button class="button button-royal icon-right super-search"></button>
-        </div><hr>
-        <h3>Category</h3>
+    <style type="text/css">
+        .page
+        {
+            width:100%;
+            height:100%;
+            padding:9px 14px 20px 14px;
+            background:purple
+        }
 
-        <ul class="list">
-            <li class="item item-checkbox">
-                location:
+        .searchbar
+        {
+            height:45px;
+            padding:0px 14px 0px 14px;
+        }
+
+        h4
+        {
+            color:white;
+        }
+
+        .submit
+        {
+            margin-top:15px;
+            font-size:20px;
+            width:30%;
+            height:40px
+        }
+        .choice
+        {
+            padding-left:10px;
+            font-size:15px;
+        }
+    </style>
+
+    <div class="page">
+
+        <div class="searchbar item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Dorm Name">
+            </label>
+            <button class="button button-clear icon-right super-search"></button>
+        </div>
+
+        <h4>Category</h4>
+
+        <div >
+            <ul>
+                <li class="choice item item-checkbox">
+                    <strong>location</strong>:
                     <input type="checkbox"> North
                     <input type="checkbox"> South
 
-            </li>
+                </li>
 
-            <li class="item item-checkbox">
-                Type:
+                <li class="choice item item-checkbox">
+                    <strong>Type</strong>:
                     <input type="checkbox"> Single
                     <input type="checkbox"> Double
-            </li>
+                </li>
 
-            <li class="item item-checkbox">
-                Price:
-                    <input type="checkbox"> < 500
+                <li class="choice item item-checkbox">
+                    <Strong>Price</Strong>:
+                    <input type="checkbox"> <500
                     <input type="checkbox"> 500-700
                     <input type="checkbox"> > 700
-            </li>
+                </li>
 
-            <li class="item item-checkbox">
-                Stars:
-                <input type="checkbox"> > 4
-                <input type="checkbox"> 3-4
-                <input type="checkbox"> < 3
-            </li>
-        </ul>
+                <li class="choice item item-checkbox">
+                    <strong>Stars</strong>:
+                    <input type="checkbox"> >4.5
+                    <input type="checkbox"> >3.5
+                    <input type="checkbox"> >2.5
+                </li>
+
+                <li class="choice item item-checkbox">
+                    <strong>Undergraduate only</strong>:
+                    <input type="checkbox"> Y
+                    <input type="checkbox"> N
+                </li>
+            </ul>
+
+
+        </div>
+
+        <div >
+            <super-navigate view-id="index">
+                <button class="submit button-block button-positive">Submit</button>
+            </super-navigate>
+        </div>
 
     </div>
 
