@@ -8,11 +8,7 @@ module.exports =
   # rootView:
   #   location: "example#getting-started"
 
-# drawers:
-#   left:
-#     id: "leftDrawer"
-#     location: "example#drawer"
-#     showOnAppLoad: false
+#
 #   options:
 #     animation: "swingingDoor"
 #
@@ -28,9 +24,11 @@ module.exports =
       id: "index"
       location: "homepage#index"
     }
-    {
-      id: "index"
-      location: "homepage#index"
-    }
+
   ]
+  drawers:
+    left:
+      id: "leftDrawer"
+      location: "homepage#search"
+      showOnAppLoad:false
 
