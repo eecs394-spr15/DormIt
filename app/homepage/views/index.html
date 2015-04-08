@@ -2,25 +2,25 @@
 
   <super-navbar>
     <super-navbar-title>
-      {{title}}
+      DormIt
     </super-navbar-title>
   </super-navbar>
 
-  <!--<input class="search" placeholder="Search" />-->
+
   <h3 align="left">Search :</h3>
-  <input ng-model="query" />
+  <input ng-model="query"/>
 
 
 
 
   <ul class="list homepage" >
     <li>
-    <a ng-repeat="dorm in dormList|filter:query" class="item item-thumbnail-left" href="{{dorm.link}}">
-      <img ng-src="{{dorm.img}}">
-      <h2 class="name">{{dorm.name}}</h2>
-      <p class="type">Residence Hall</p>
-      <img src="https://farm5.staticflickr.com/4063/4348708850_7767fe0d4c_o.png" height="4%" width = "50%">
-    </a>
+      <a ng-repeat="dorm in dormList|filter:query" class="item item-thumbnail-left" href="{{dorm.link}}">
+        <img ng-src="{{dorm.img}}">
+        <h2>{{dorm.name}}</h2>
+        <p>Residence Hall</p>
+        <img src="https://farm5.staticflickr.com/4063/4348708850_7767fe0d4c_o.png" height="4%" width = "50%">
+      </a>
     </li>
   </ul>
 </div>
