@@ -24,3 +24,7 @@ angular
             link:"#"}]
       }
     });
+$scope.query = {};
+$scope.queryBy = '$';
+$scope.orderProp="name";
+
