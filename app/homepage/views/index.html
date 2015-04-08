@@ -2,27 +2,20 @@
 
   <super-navbar>
     <super-navbar-title>
-      DormIt
+      {{title}}
     </super-navbar-title>
   </super-navbar>
 
-  <div class="list homepage">
+  <super-navigate view-id="search" action="click">
+    <button class="button button-full button-stable">Search</button>
+  </super-navigate>
 
-      <super-navigate view-id="search" action="click">
-        <button class="button button-full button-stable">Search</button>
-      </super-navigate>
+  <div class="list homepage" >
 
-    <a class="item item-thumbnail-left" href="#">
-      <img src="http://www.northwestern.edu/living/housing-options/assets/sargent.jpg">
-      <h2>Sargent Hall</h2>
+    <a ng-repeat="dorm in dormList" class="item item-thumbnail-left" href="{{dorm.link}}">
+      <img ng-src="{{dorm.img}}">
+      <h2>{{dorm.name}}</h2>
       <p>Residence Hall</p>
     </a>
-
-    <a class="item item-thumbnail-left" href="#">
-      <img src="http://www.northwestern.edu/living/housing-options/assets/hinman.jpg">
-      <h2>1835 Hinman</h2>
-      <p>Residence Hall</p>
-    </a>
-
   </div>
 </div>
