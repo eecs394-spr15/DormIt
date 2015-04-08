@@ -15,15 +15,12 @@
 
   <ul class="list homepage" >
     <li>
-    <a ng-repeat="dorm in dormList|filter:query" class="item item-thumbnail-left" href="{{dorm.link}}">
-      <img ng-src="{{dorm.img}}">
-        <h2 class="name">{{dorm.name}}</h2>
-        <p class="type">Residence Hall</p>
-      <h2>{{dorm.name}}</h2>
-      <p>Residence Hall</p>
+      <a ng-repeat="dorm in dormList|filter:query" class="item item-thumbnail-left" href="{{dorm.link}}">
+        <img ng-src="{{dorm.img}}">
+        <h2>{{dorm.name}}</h2>
+        <p>Residence Hall</p>
         <img src="https://farm5.staticflickr.com/4063/4348708850_7767fe0d4c_o.png" height="4%" width = "50%">
-    </a>
+      </a>
     </li>
   </ul>
 </div>
-<script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
