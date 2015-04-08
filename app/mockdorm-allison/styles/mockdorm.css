@@ -1,0 +1,101 @@
+i{
+    margin: 0px;
+    display: inline
+}
+p
+{
+    margin: 0px;
+}
+.dorm
+{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.images
+{
+    vertical-align: bottom;
+    overflow: hidden;
+    width: 100%;
+    height: 175px;
+    text-align: center;
+    vertical-align: bottom;
+}
+.address
+{
+    display: block;
+    height: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    font-size: 15px;
+    text-align: left;
+    color: #585858;
+    font-style: italic;
+}
+.reviews
+{
+    display: block;
+    height: auto;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding-left: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    margin-right: 10px;
+    text-align: left;
+}
+.review-data
+{
+    color: #808080;
+    padding-left: 8px;
+    font-size: 20px;
+    font-weight: 100;
+}
+.title
+{
+    display: block;
+    align-content: center;
+    background-color: #4E015C;
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+    color: white;
+    text-align: left;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    font-weight: bold;
+}
+.checked-details
+{
+    font-size: 17px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    text-align: left;
+    padding-left: 16px;
+}
+.dorm-thumbnails
+{
+    width: 100%;
+    text-align: center;
+    color: #4E015C;
+    margin-top: 13px;
+}
+.thumbnail-span
+{
+    width: 32%;
+    height: auto;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 20px;
+    display: inline-block;
+    text-decoration: underline;
+    line-height: 130%;
+    word-wrap: break-word;
+    vertical-align: top;
+}
