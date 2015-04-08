@@ -119,7 +119,6 @@ angular
       })
 
       $scope.title = "DormIt";
-      $scope.query = {};
       $scope.queryBy = '$';
       $scope.orderProp="name";
 
