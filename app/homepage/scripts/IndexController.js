@@ -112,22 +112,15 @@ angular
       $scope.dormList = listDorms.sort(function(a, b) {
         var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
         if (nameA < nameB)
-          return -1
+          return -1;
         if (nameA > nameB)
-          return 1
-        return 0
+          return 1;
+        return 0;
       })
 
       $scope.title = "DormIt";
+      $scope.query = {};
+      $scope.queryBy = '$';
+      $scope.orderProp="name";
 
-      $scope.removeElement = function(){
-        $scope.dormList = [
-          {img:"http://www.northwestern.edu/living/housing-options/assets/sargent.jpg",
-            name:"Sargent",
-            link:"#"}]
-      }
     });
-$scope.query = {};
-$scope.queryBy = '$';
-$scope.orderProp="name";
-
