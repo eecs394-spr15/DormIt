@@ -2,9 +2,6 @@ angular
     .module('homepage')
     .controller('IndexController', function($scope, supersonic) {
       // Controller functionality
-
-      $scope.demo1 = {};
-
       var listDorms = [
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/sargent.jpg",
