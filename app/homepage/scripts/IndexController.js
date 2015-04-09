@@ -2,6 +2,9 @@ angular
     .module('homepage')
     .controller('IndexController', function($scope, supersonic) {
       // Controller functionality
+
+      $scope.demo1 = {};
+
       var listDorms = [
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/sargent.jpg",
@@ -202,10 +205,3 @@ angular
       }
 
     });
-iconflag = 0;
-$scope.changeIcon = function(clickEvent) {
-  if (iconflag == 1){button.class = "super-chevron-up";}
-  else{button.class = "super-chevron-down";}
-  $scope.clickEvent = simpleKeys(clickEvent);
-  console.log(clickEvent);
-};
