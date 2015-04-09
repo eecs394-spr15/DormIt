@@ -202,3 +202,10 @@ angular
       }
 
     });
+iconflag = 0;
+$scope.changeIcon = function(clickEvent) {
+  if (iconflag == 1){button.class = "super-chevron-up";}
+  else{button.class = "super-chevron-down";}
+  $scope.clickEvent = simpleKeys(clickEvent);
+  console.log(clickEvent);
+};

@@ -6,14 +6,13 @@
     </super-navbar-title>
   </super-navbar>
 
-
-
-
   <div class="searchbar item item-input-inset">
     <label class="item-input-wrapper">
       <input ng-model="query.name" type="text" placeholder="Dorm Name">
     </label>
-    <button class="button button-clear icon-right super-search"></button>
+    <button type="button" class="button button-clear super-chevron-down" data-toggle="collapse" data-target="#demo"
+            ng-click="changeIcon($event)">
+    </button>
   </div>
   <div>
     <input type="checkbox" ng-model="queryLoc['North']">North</input>
@@ -24,6 +23,43 @@
     <input type="checkbox" ng-model="queryType['Residential College']">Residential College</input>
   </div>
 
+  <div id="demo" class="collapse">
+    <ul>
+      <li class="choice item item-checkbox">
+        <strong>Location</strong>:
+        <input type="checkbox"> North
+        <input type="checkbox"> South
+      </li>
+
+      <li class="choice item item-checkbox">
+        <strong>Type</strong>:
+        <input type="checkbox"> Single
+        <input type="checkbox"> Double
+      </li>
+
+      <li class="choice item item-checkbox">
+        <Strong>Price</Strong>:
+        <input type="checkbox"> <500
+        <input type="checkbox"> 500-700
+        <input type="checkbox"> > 700
+      </li>
+
+      <li class="choice item item-checkbox">
+        <strong>Stars</strong>:
+        <input name="stars" type="radio"> >4.5
+        <input name="stars" type="radio"> >3.5
+        <input name="stars" type="radio"> >2.5
+      </li>
+
+      <li class="choice item item-checkbox">
+        <form>
+          <strong>Undergraduate only</strong>:
+          <label><input name="dorm" type="radio"> Y</label>
+          <label><input name="dorm" type="radio"> N</label>
+        </form>
+      </li>
+    </ul>
+  </div>
 
   <ul class="list homepage">
     <li>
@@ -37,4 +73,7 @@
     </li>
   </ul>
 </div>
-<script data-require="angular.js@1.2.0-rc3" data-semver="1.2.0-rc3" src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
