@@ -24,11 +24,5 @@ module.exports =
       id: "index"
       location: "homepage#index"
     }
-
   ]
-  drawers:
-    left:
-      id: "leftDrawer"
-      location: "homepage#search"
-      showOnAppLoad:false
 
