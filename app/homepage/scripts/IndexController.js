@@ -181,11 +181,16 @@ angular
       $scope.queryBy = '$';
       $scope.orderProp="name";
 
+      $scope.chevron = "super-chevron-down";
+      $scope.switchButton = function(){
+        if ($scope.chevron == "super-chevron-down")
+          $scope.chevron = "super-chevron-up";
+        else
+          $scope.chevron = "super-chevron-down";
+      }
+
+
+
+
+
     });
-iconflag = 0;
-$scope.changeIcon = function(clickEvent) {
-  if (iconflag == 1){button.class = "super-chevron-up";}
-  else{button.class = "super-chevron-down";}
-  $scope.clickEvent = simpleKeys(clickEvent);
-  console.log(clickEvent);
-};
