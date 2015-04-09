@@ -57,7 +57,7 @@ angular
           location:"South",
           size:"Large",
           type:"Residence Hall",
-          link:"../mockdorm-allison/mockdorm.html"
+          link:"mockdorm-allison#mockdorm"
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/slivka.jpg",
