@@ -1,4 +1,4 @@
-<div ng-controller="SearchController" class="padding">
+<div class="padding">
 
     <script>
         document.addEventListener("touchmove", function(e){
@@ -66,12 +66,12 @@
 
         </div>
 
-        <div >
+        <div>
             <super-navigate view-id="index">
-                <button class="submit button-block button-positive">Submit</button>
+                <button class="submit button-block button-positive">{{orderProp}}</button>
             </super-navigate>
         </div>
 
+        <p>{{orderProp}}</p>
     </div>
-
 </div>

@@ -11,15 +11,23 @@
 
   <div class="searchbar item item-input-inset">
     <label class="item-input-wrapper">
-      <input ng-model="query" type="text" placeholder="Dorm Name">
+      <input ng-model="query.name" type="text" placeholder="Dorm Name">
     </label>
     <button class="button button-clear icon-right super-search"></button>
   </div>
+  <div>
+    <input type="checkbox" ng-model="queryLoc['North']">North</input>
+    <input type="checkbox" ng-model="queryLoc['South']">South</input>
+    <input type="checkbox" ng-model="querySize['Small']">Small</input>
+    <input type="checkbox" ng-model="querySize['Large']">Large</input>
+    <input type="checkbox" ng-model="queryType['Residence Hall']">Residence Hall</input>
+    <input type="checkbox" ng-model="queryType['Residential College']">Residential College</input>
+  </div>
 
 
-  <ul class="list homepage" >
+  <ul class="list homepage">
     <li>
-      <super-navigate ng-repeat="dorm in dormList|filter:query" class="item item-thumbnail-left" view-id="{{dorm.link}}">
+      <super-navigate ng-repeat="dorm in dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType" class="item item-thumbnail-left" view-id="{{dorm.link}}">
         <img ng-src="{{dorm.img}}">
         <h2 class="name">{{dorm.name}}</h2>
         <p class="type">{{dorm.location}} | {{dorm.size}}</p>
