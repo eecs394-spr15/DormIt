@@ -175,11 +175,31 @@ angular
         if (nameA > nameB)
           return 1;
         return 0;
-      })
+      });
 
-      $scope.title = "DormIt";
-      $scope.queryBy = '$';
-      $scope.orderProp="name";
+      $scope.queryLoc = {};
+      $scope.filterByLoc = function(dorm){
+        return $scope.queryLoc[dorm.location] || noFilter($scope.queryLoc);
+      };
+
+      $scope.querySize = {};
+      $scope.filterBySize = function(dorm){
+        return $scope.querySize[dorm.size] || noFilter($scope.querySize);
+      };
+
+      $scope.queryType = {};
+      $scope.filterByType = function(dorm){
+        return $scope.queryType[dorm.type] || noFilter($scope.queryType);
+      };
+
+      function noFilter(filterObj){
+        for(var k in filterObj){
+          if(filterObj[k]){
+            return false;
+          }
+        }
+        return true;
+      }
 
       $scope.chevron = "super-chevron-down";
       $scope.switchButton = function(){
