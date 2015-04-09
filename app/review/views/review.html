@@ -1,0 +1,83 @@
+<div ng-controller="ReviewController">
+    <super-navbar>
+        <super-navbar-title>
+            Rate Your Dorm
+        </super-navbar-title>
+    </super-navbar>
+
+    <link rel="stylesheet" href="styles/review.css">
+
+    <div class="review-page" style="margin-top: 6px;">
+        <div class="caption">
+            <p>Help other students find their perfect home!</p>
+        </div>
+        <div class="title">
+            <p>Socialness:</p>
+        </div>
+        <div class="caption">
+            <p>Neighborly floor-mates, social events, the works.</p>
+        </div>
+        <div class="rating">
+            <div class="button-bar">
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+            </div>
+        </div>
+        <div class="title">
+            <p>Room Size:</p>
+        </div>
+        <div class="caption">
+            <p>Did your dorm feel like a closet?</p>
+        </div>
+        <div class="rating">
+            <div class="button-bar">
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+            </div>
+        </div>
+        <div class="title">
+            <p>Rowdiness:</p>
+        </div>
+        <div class="caption">
+            <p>Remember those crazy floor parties?</p>
+        </div>
+        <div class="rating">
+            <div class="button-bar">
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+            </div>
+        </div>
+        <div class="title">
+            <p>Bathrooms:</p>
+        </div>
+        <div class="caption">
+            <p>Porcelain throne? Or was it pretty scary stuff?</p>
+        </div>
+        <div ng-controller="ReviewController" class="rating">
+            <div class="button-bar">
+                <button class="button button-clear icon super-happy"></button>
+                <!---<button class="button icon super-happy" ng-class="{{button-type}} {{button-style}}" ng-click="start()"></button>--->
+                <!---<button class="button {{button-type}} {{button-style}} icon super-happy" ng-click="start()"></button>--->
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+                <button class="button button-clear icon super-happy"></button>
+
+            </div>
+        </div>
+            <div class="submit">
+                <super-navigate view-id="index">
+                    <button class="button button-outline button-dark">&emsp;&emsp; Submit &emsp;&emsp;</button>
+                </super-navigate>
+            </div>
+    </div>
+</div>
