@@ -43,19 +43,23 @@
         <input type="checkbox"> > 700
       </li>
 
-      <li class="choice item item-checkbox">
-        <strong>Stars</strong>:
-        <input type="radio" name="stars"> > 4.5
-        <input type="radio" name="stars"> > 3.5
-        <input type="radio" name="stars"> > 2.5
+      <li>
+        <div class="list">
+          <div class="item range range-positive">
+            <strong>Stars: </strong>
+            <input type="range" step="0.1" name="foo" min="0" max="5" ng-model="queryStar">
+            <output for="foo" onforminput="value = foo.valuesAsNumber;"></output>
+            <strong><span ng-bind="queryStar"></span> to 5</strong>
+          </div>
+        </div>
       </li>
-
     </ul>
   </div>
 
+
   <ul class="list homepage">
     <li>
-      <super-navigate ng-repeat="dorm in dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType" class="item item-thumbnail-left" view-id="{{dorm.link}}">
+      <super-navigate ng-repeat="dorm in dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType|filter:filterByStar" class="item item-thumbnail-left" view-id="{{dorm.link}}">
         <img ng-src="{{dorm.img}}">
         <h2 class="name">{{dorm.name}}</h2>
         <p class="type">{{dorm.location}} | {{dorm.size}}</p>

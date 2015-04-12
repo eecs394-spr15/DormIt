@@ -9,7 +9,8 @@ angular
           location:"North",
           size:"Large",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/hinman.jpg",
@@ -17,7 +18,8 @@ angular
           location:"South",
           size:"Large",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/foster-walker.jpg",
@@ -25,7 +27,8 @@ angular
           location:"South",
           size:"Large",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/jones.jpg",
@@ -33,7 +36,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residential College",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/elder.jpg",
@@ -41,7 +45,8 @@ angular
           location:"North",
           size:"Large",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/bobb.jpg",
@@ -49,7 +54,8 @@ angular
           location:"North",
           size:"Large",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/allison.jpg",
@@ -57,7 +63,8 @@ angular
           location:"South",
           size:"Large",
           type:"Residence Hall",
-          link:"mockdorm-allison#mockdorm"
+          link:"mockdorm-allison#mockdorm",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/slivka.jpg",
@@ -65,7 +72,8 @@ angular
           location:"North",
           size:"Large",
           type:"Residential College",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/ayers.jpg",
@@ -73,7 +81,8 @@ angular
           location:"North",
           size:"Large",
           type:"Residential College",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/lindgren.jpg",
@@ -81,7 +90,8 @@ angular
           location:"North",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/kemper.jpg",
@@ -89,7 +99,8 @@ angular
           location:"North",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:4
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/hobart.jpg",
@@ -97,14 +108,16 @@ angular
           location:"South",
           size:"Small",
           type:"Residential College",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/goodrich.jpg",
           name:"Goodrich",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/parc.jpg",
@@ -112,7 +125,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/rogers.jpg",
@@ -120,7 +134,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/shepard.jpg",
@@ -128,7 +143,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/willard.jpg",
@@ -136,7 +152,8 @@ angular
           location:"South",
           size:"Large",
           type:"Residential College",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/seabury.jpg",
@@ -144,7 +161,8 @@ angular
           location:"North",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/nmq.jpg",
@@ -152,7 +170,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         },
         {
           img:"http://www.northwestern.edu/living/housing-options/assets/smq.jpg",
@@ -160,7 +179,8 @@ angular
           location:"South",
           size:"Small",
           type:"Residence Hall",
-          link:"#"
+          link:"#",
+          star:3
         }
       ];
 
@@ -192,6 +212,11 @@ angular
         return $scope.queryType[dorm.type] || noFilter($scope.queryType);
       };
 
+      $scope.queryStar = 2;
+      $scope.filterByStar = function(dorm){
+        return dorm.star > $scope.queryStar;
+      };
+
       function noFilter(filterObj){
         for(var k in filterObj){
           if(filterObj[k]){
@@ -208,9 +233,4 @@ angular
         else
           $scope.chevron = "super-chevron-down";
       }
-
-
-
-
-
     });
