@@ -6,7 +6,8 @@ angular.module('services', ['parse-angular'])
         var parseFactory = {};
 
         parseFactory.getList = function(){
-            var query = new Parse.Query('dorms')
+            var query = new Parse.Query('dorms');
+            query.ascending('name');
             return query.find()
         }
 

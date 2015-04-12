@@ -11,20 +11,9 @@ angular
       });
 
 
-
-
       function compare(el1, el2, index) {
         return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
       }
-
-      /*$scope.dormList = listDorms.sort(function(a, b) {
-        var nameA=a.name.toLowerCase(), nameB=b.name.toLowerCase()
-        if (nameA < nameB)
-          return -1;
-        if (nameA > nameB)
-          return 1;
-        return 0;
-      });*/
 
       $scope.queryLoc = {};
       $scope.filterByLoc = function(dorm){
