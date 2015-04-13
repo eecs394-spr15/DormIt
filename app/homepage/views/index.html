@@ -46,16 +46,15 @@
       <li>
         <div class="list">
           <div class="item range range-positive">
-            <strong>Stars: </strong>
-            <input type="range" step="0.1" name="foo" min="0" max="5" ng-model="queryStar">
-            <output for="foo" onforminput="value = foo.valuesAsNumber;"></output>
-            <strong><span ng-bind="queryStar"></span> to 5</strong>
+            <strong>Stars</strong>{{": "}}
+            <div> <span ng-bind="queryStar"></span></div>
+            <input type="range" step="0.1" name="foo" min="0" max="5" ng-model="queryStar">5
+            <!--<strong><span ng-bind="queryStar"></span></strong>-->
           </div>
         </div>
       </li>
     </ul>
   </div>
-
 
   <ul class="list homepage">
     <li>

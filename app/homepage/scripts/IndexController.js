@@ -212,7 +212,7 @@ angular
         return $scope.queryType[dorm.type] || noFilter($scope.queryType);
       };
 
-      $scope.queryStar = 2;
+      $scope.queryStar = 2.5;
       $scope.filterByStar = function(dorm){
         return dorm.star > $scope.queryStar;
       };
