@@ -164,8 +164,18 @@ angular
           link:"#"
         }
       ];
+    .controller('IndexController', function($scope, supersonic, parse) {
 
       $scope.reverse = false;
+
+      parse.getList().then(function(res){
+        var dormArray = [];
+        res.forEach(function(val){
+          dormArray.push(val.attributes);
+        });
+        $scope.dormList = dormArray;
+      });
+
 
       function compare(el1, el2, index) {
         return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
@@ -234,6 +244,11 @@ angular
         return $scope.queryType[dorm.type] || noFilter($scope.queryType);
       };
 
+      $scope.queryStar = 2.5;
+      $scope.filterByStar = function(dorm){
+        return dorm.star >= $scope.queryStar;
+      };
+
       function noFilter(filterObj){
         for(var k in filterObj){
           if(filterObj[k]){
@@ -250,9 +265,5 @@ angular
         else
           $scope.chevron = "super-chevron-down";
       }
-
-
-
-
-
+      
     });
