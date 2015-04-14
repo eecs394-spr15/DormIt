@@ -54,8 +54,8 @@ input[type="range"] {
 }
 input[type="range"]::-webkit-slider-thumb {
     position: relative;
-    width: 14px;
-    height: 28px;
+    width: 10px;
+    height: 20px;
     border-radius: 25%;
     background-color: purple;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2);
@@ -66,10 +66,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 input[type="range"]::-webkit-slider-thumb:after {
     position: absolute;
-    top: 11px;
-    left: 7px;
+    top: 8px;
+    left: 5px;
     width: 2000px;
-    height: 8px;
+    height: 6px;
     background: #444;
     content: " ";
 }
