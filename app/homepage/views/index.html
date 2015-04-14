@@ -1,4 +1,4 @@
-<div ng-controller="IndexController" class="padding">
+<div ng-controller="IndexController" class="page">
   <link rel="stylesheet" href="styles/index.css">
 
   <super-navbar>
@@ -7,9 +7,8 @@
     </super-navbar-title>
   </super-navbar>
 
-
-  <div class="item item-input-inset">
-    <label class="item-input-wrapper">
+  <div class="searchbar item item-input-inset">
+    <label class=" item-input-wrapper">
       <input ng-model="query.name" type="text" placeholder="Dorm Name">
     </label>
     <button type="button" id = td_id class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()">
@@ -36,12 +35,13 @@
         <input type="checkbox" ng-model="queryType['Residential College']"> Residential College
       </li>
 
-      <li class="choice item item-checkbox">
+ <!--     <li class="choice item item-checkbox">
         <Strong>Price</Strong>:
         <input type="checkbox"> < 500
         <input type="checkbox"> 500-700
         <input type="checkbox"> > 700
       </li>
+      -->
 
       <li>
         <div class="list">
@@ -49,21 +49,20 @@
             <strong>Stars</strong>{{": "}}
             <div> <span ng-bind="queryStar"></span></div>
             <input type="range" step="0.1" name="foo" min="0" max="5" ng-model="queryStar">5
-            <!--<strong><span ng-bind="queryStar"></span></strong>-->
           </div>
         </div>
       </li>
 
       <li class="choice item item-checkbox">
         <Strong>Sort:</Strong>
-        <button class="sortButton" ng-click="sortByLocation()">
-          Location
+        <button class="sortButton" ng-class="{active:isSet(1)}"  ng-click="sortByLocation()">
+          <div>Location</div>
         </button>
-        <button class="sortButton" ng-click="sortByName()">
-          Name
+        <button class="sortButton" ng-class="{active:isSet(2)}" ng-click="sortByName()">
+          <div>Name</div>
         </button>
-        <button class="sortButton" ng-click="sortByName()">
-          Rating
+        <button class="sortButton" ng-class="{active:isSet(3)}" ng-click="sortByRating()">
+          <div>Rating</div>
         </button>
       </li>
 
@@ -82,9 +81,9 @@
     </li>
   </ul>
 
-  <div ng-show="filtered.length === 0">
+  <div class="nofound" ng-show="filtered.length === 0">
     <h4>Oops! No dorms found...</h4>
-    <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=9374089" width = "50">
+    <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=9374089" width = "100">
   </div>
 </div>
 
