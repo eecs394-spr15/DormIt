@@ -31,6 +31,11 @@ angular
         return $scope.queryType[dorm.type] || noFilter($scope.queryType);
       };
 
+      $scope.queryStar = 2.5;
+      $scope.filterByStar = function(dorm){
+        return dorm.star >= $scope.queryStar;
+      };
+
       function noFilter(filterObj){
         for(var k in filterObj){
           if(filterObj[k]){
@@ -47,9 +52,5 @@ angular
         else
           $scope.chevron = "super-chevron-down";
       }
-
-
-
-
-
+      
     });
