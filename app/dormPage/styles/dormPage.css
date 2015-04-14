@@ -47,10 +47,9 @@ p
     margin-right: 10px;
     text-align: left;
 }
-.review-data
+.review-data button
 {
-    color: #808080;
-    padding-left: 8px;
+    padding-left: 3px;
     font-size: 20px;
     font-weight: 100;
 }
@@ -98,4 +97,30 @@ p
     line-height: 130%;
     word-wrap: break-word;
     vertical-align: top;
+}
+
+.tab
+{
+    position:relative;
+    background: purple;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    left: 1px;
+}
+.active
+ {
+    background: white;
+    border-bottom: 1px solid white;
+    z-index: 2;
+}
+.tab div
+{
+    text-align:center;
+    color:white;
+}
+.active div
+{
+    color:purple;
+
 }
