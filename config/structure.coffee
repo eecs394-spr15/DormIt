@@ -4,7 +4,7 @@ module.exports =
 
   rootView:
     location: "review#review"
-
+    #location:"homepage#index"
   # rootView:
   #   location: "example#getting-started"
 
@@ -19,10 +19,15 @@ module.exports =
     {
       id: "search"
       location: "homepage#search"
+
     }
     {
       id: "index"
       location: "homepage#index"
+    }
+    {
+      id: "review"
+      location: "review#review"
     }
   ]
 

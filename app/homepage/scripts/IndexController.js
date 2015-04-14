@@ -50,7 +50,7 @@ angular
           $scope.chevron = "super-chevron-up";
         else
           $scope.chevron = "super-chevron-down";
-      }
+      };
 
 
 
