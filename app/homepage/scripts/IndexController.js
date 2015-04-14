@@ -5,6 +5,7 @@ angular
       parse.getList().then(function(res){
         var dormArray = [];
         res.forEach(function(val){
+          val.attributes.id = val.id;
           dormArray.push(val.attributes);
         });
         $scope.dormList = dormArray;

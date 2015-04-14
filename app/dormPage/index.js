@@ -1,4 +1,4 @@
-angular.module('mockdorm', [
+angular.module('dormPage', [
     // Declare any module-specific AngularJS dependencies here
     'common'
 ]);

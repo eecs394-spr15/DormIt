@@ -58,7 +58,7 @@
 
   <ul class="list homepage">
     <li>
-      <super-navigate ng-repeat="dorm in (filtered= (dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType|filter:filterByStar))" class="item item-thumbnail-left" view-id="{{dorm.link}}">
+      <super-navigate ng-repeat="dorm in (filtered= (dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType|filter:filterByStar))" class="item item-thumbnail-left" view-id="dormPage#dorm?id={{dorm.id}}">
         <img ng-src="{{dorm.img}}">
         <h2 class="name">{{dorm.name}}</h2>
         <p class="type">{{dorm.location}} | {{dorm.size}}</p>

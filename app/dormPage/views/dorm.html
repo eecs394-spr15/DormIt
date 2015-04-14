@@ -1,0 +1,46 @@
+<div ng-controller="DormPageController">
+
+    <super-navbar>
+        <super-navbar-button side="right" location="review#review">Review</super-navbar-button>
+        <super-navbar-title>
+            {{dorm.name}}
+        </super-navbar-title>
+    </super-navbar>
+
+    <link rel="stylesheet" href="styles/dormPage.css">
+
+    <div class="dorm">
+        <div class="images">
+            <img style="width: 100%; max-height: auto;" ng-src="{{dorm.img}}"/>
+        </div>
+
+        <div class="address">
+            <p>{{dorm.address}}</p>
+        </div>
+
+        <div class="info">
+            <p class="title">Stats and Info:</p>
+            <p>{{dorm.location}} Campus {{dorm.type}}</p>
+            <p><b>{{dorm.double}}</b> Doubles</p>
+            <p><b>{{dorm.single}}</b> Singles</p>
+            <p><b>{{dorm.triple}}</b> Triples</p>
+            <p> For a total of <b>{{dorm.single+dorm.double+dorm.triple}}</b> residents</p>
+            <br/>
+            <p ng-show="dorm.airconditioning">Has Air Conditioning</p>
+            <p ng-show="dorm.dininghall">Dining Hall On-site</p>
+            <p>Price: ${{dorm.price}} per quarter</p>
+            <p>{{dorm.other}}</p>
+        </div>
+
+
+        <div class="reviews">
+            <p class="title">How Residents Rated this Dorm:</p>
+            <p>Socialness:<span class="review-data">{{dorm.socialness}}</span></p>
+            <p>Room Size:<span class="review-data">{{dorm.roomsize}}</span></p>
+            <p>Rowdiness:<span class="review-data">{{dorm.rowdiness}}</span></p>
+            <p>Bathrooms:<span class="review-data">{{dorm.bathrooms}}</span></p>
+        </div>
+
+
+    </div>
+</div>
