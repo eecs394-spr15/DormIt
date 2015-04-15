@@ -32,49 +32,51 @@
             </ul>
 
             <div ng-show="isSet(1)">
-                <div class="padding">
-                    <table>
-                        <tr>
-                            <td class="column-name"><strong>Location</strong></td>
-                            <td class="column-data">{{dorm.location}} Campus</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Type</strong></td>
-                            <td class="column-data">{{dorm.type}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Air Conditioning</strong></td>
-                            <td class="column-data"><p ng-show="dorm.airconditioning">Yes</p><p ng-hide="dorm.airconditioning">No</p></td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Dining Hall On-site</strong></td>
-                            <td class="column-data"><p ng-show="dorm.dininghall">Yes</p><p ng-hide="dorm.dininghall">No</p></td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Price</strong></td>
-                            <td class="column-data">{{dorm.price | currency:$:0}} per quarter</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Doubles</strong></td>
-                            <td class="column-data">{{dorm.double}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Singles</strong></td>
-                            <td class="column-data">{{dorm.single}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Triples</strong></td>
-                            <td class="column-data">{{dorm.triple}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Residents</strong></td>
-                            <td class="column-data">{{dorm.single+dorm.double*2+dorm.triple*3}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Others</strong></td>
-                            <td class="column-data">{{dorm.other}}</td>
-                        </tr>
-                    </table>
+                <div class="infolist">
+                    <ul>
+                        <li class="row">
+                            <p class="column-name"><strong>Location</strong></p>
+                            <p class="column-data">{{dorm.location}} Campus</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Type</strong></p>
+                            <p class="column-data">{{dorm.type}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Air Conditioning</strong></p>
+                            <p class="column-data" ng-show="dorm.airconditioning">Yes</p>
+                            <p class="column-data" ng-hide="dorm.airconditioning">No</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Dining Hall On-site</strong></p>
+                            <p class="column-data" ng-show="dorm.dininghall">Yes</p>
+                            <p class="column-data" ng-hide="dorm.dininghall">No</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Price</strong></p>
+                            <p class="column-data">{{dorm.price | currency:$:0}} per quarter</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Doubles</strong></p>
+                            <p class="column-data">{{dorm.double}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Singles</strong></p>
+                            <p class="column-data">{{dorm.single}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Triples</strong></p>
+                            <p class="column-data">{{dorm.triple}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Residents</strong></p>
+                            <p class="column-data">{{dorm.single+dorm.double*2+dorm.triple*3}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Others</strong></p>
+                            <p class="column-data">{{dorm.other}}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
