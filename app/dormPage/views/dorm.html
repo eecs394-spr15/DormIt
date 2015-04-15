@@ -13,12 +13,12 @@
         <div class="images">
             <img style="width: 100%; max-height: auto;" ng-src="{{dorm.img}}"/>
         </div>
-
         <div class="address">
             <p>{{dorm.address | uppercase}}</p>
         </div>
 
         <section ng-controller="TabController">
+
             <ul class="row">
                 <li class="tab col col-33" ng-click="setTab(1)" ng-class="{ active: isSet(1) }">
                     <div><strong>Stats&Info</strong></div>
@@ -30,6 +30,7 @@
                     <div><strong>Reviews</strong></div>
                 </li>
             </ul>
+
             <div ng-show="isSet(1)">
                 <div class="padding">
                     <table>
@@ -75,25 +76,8 @@
                         </tr>
                     </table>
                 </div>
-
-
-
-
-    <!--            <div class="padding">
-                    <p>{{dorm.location}} Campus {{dorm.type}}</p>
-                    <p><b>{{dorm.double}}</b> Doubles</p>
-                    <p><b>{{dorm.single}}</b> Singles</p>
-                    <p><b>{{dorm.triple}}</b> Triples</p>
-                    <p> For a total of <b>{{dorm.single+dorm.double*2+dorm.triple*3}}</b> residents</p>
-                    <br/>
-                    <p ng-show="dorm.airconditioning">Has Air Conditioning</p>
-                    <p ng-show="dorm.dininghall">Dining Hall On-site</p>
-                    <p>Price: ${{dorm.price}} per quarter</p>
-                    <p>{{dorm.other}}</p>
-                </div>
-                -->
-
             </div>
+
             <div ng-show="isSet(2)">
                 <div class="padding">
                     <p><strong>Socialness</strong>:

@@ -2,6 +2,10 @@ angular
     .module('homepage')
     .controller('IndexController', function($scope, supersonic, parse) {
 
+      $scope.sort = 0;
+      $scope.isSet = function(tabName){
+        return $scope.sort === tabName;
+      };
       $scope.reverse = false;
 
       parse.getList().then(function(res){
@@ -19,6 +23,7 @@ angular
       }
 
       $scope.sortByName = function() {
+        $scope.sort = 2;
         $scope.reverse = !$scope.reverse;
         if ($scope.reverse == true) {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -43,6 +48,7 @@ angular
       }
 
       $scope.sortByLocation = function() {
+        $scope.sort = 1;
         $scope.reverse = !$scope.reverse;
         if ($scope.reverse) {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -64,6 +70,10 @@ angular
             return 0;
           });
         }
+      }
+
+      $scope.sortByRating = function(){
+        $scope.sort = 3;
       }
 
       $scope.queryLoc = {};
