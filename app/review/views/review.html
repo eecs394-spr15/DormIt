@@ -67,7 +67,7 @@
         <div class="caption">
             <p>Porcelain throne? Or was it pretty scary stuff?</p>
         </div>
-        <div ng-controller="ReviewController" class="rating">
+        <div class="rating">
             <div class="button-bar">
                 <button class="button button-clear" ng-class="Rate41" ng-click="select41()"></button>
                 <button class="button button-clear" ng-class="Rate42" ng-click="select42()"></button>
@@ -76,8 +76,16 @@
                 <button class="button button-clear" ng-class="Rate45" ng-click="select45()"></button>
             </div>
         </div>
-            <div class="submit">
-                <super-navigate-back><button class="button button-outline button-dark">&emsp;&emsp; Submit &emsp;&emsp;</button></super-navigate-back>
-            </div>
+
+
+        <div class="comments">
+            <div class="title"> <p>Comments:</p> </div>
+            <label class="item item-input">
+                <textarea placeholder="Comments" ng-model="review.comments"></textarea>
+            </label>
+        </div>
+        <div class="submit">
+            <button class="button button-outline button-dark" ng-click="submit()">&emsp;&emsp; Submit &emsp;&emsp;</button>
+        </div>
     </div>
 </div>

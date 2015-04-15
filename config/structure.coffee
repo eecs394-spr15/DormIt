@@ -3,21 +3,12 @@
 module.exports =
 
   rootView:
-
     location:"homepage#index"
-  preloads: [
-    {
-      id: "search"
-      location: "homepage#search"
 
-    }
+  preloads: [
     {
       id: "index"
       location: "homepage#index"
-    }
-    {
-      id: "review"
-      location: "review#review"
     }
   ]
 

@@ -1,6 +1,28 @@
 angular
     .module('review')
-    .controller('ReviewController', function($scope, supersonic,parse) {
+    .controller('ReviewController', function($scope, supersonic, parse) {
+
+        $scope.review={dorm: steroids.view.params.id};
+
+        $scope.submit = function() {
+            parse.submitReview($scope.review).then(function(res) {
+                supersonic.ui.layers.pop();
+            });
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         $scope.Rate11 = "icon super-ios7-star-outline";
         $scope.Rate12 = "icon super-ios7-star-outline";
         $scope.Rate13 = "icon super-ios7-star-outline";

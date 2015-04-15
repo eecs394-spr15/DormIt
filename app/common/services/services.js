@@ -16,6 +16,12 @@ angular.module('services', ['parse-angular'])
 
         };
 
+        parseFactory.submitReview = function(review){
+            var submissions = Parse.Object.extend("reviews");
+            var sub = new submissions();
+            return sub.save(review);
+        };
+
         return parseFactory
 
-    })
+    });
