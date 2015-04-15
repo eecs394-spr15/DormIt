@@ -3,18 +3,8 @@
 module.exports =
 
   rootView:
-    location: "review#review"
-    #location:"homepage#index"
-  # rootView:
-  #   location: "example#getting-started"
 
-#
-#   options:
-#     animation: "swingingDoor"
-#
-# initialView:
-#   id: "initialView"
-#   location: "example#initial-view"
+    location:"homepage#index"
   preloads: [
     {
       id: "search"
