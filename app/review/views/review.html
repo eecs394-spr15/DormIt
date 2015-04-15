@@ -10,73 +10,71 @@
 
     <div class="review-page" style="margin-top: 6px;">
         <div class="caption">
-            <p>Help other students find their perfect home!</p>
-        </div>
-        <div class="title">
-            <p>Socialness:</p>
-        </div>
-        <div class="caption">
-            <p>Neighborly floor-mates, social events, the works.</p>
+            <p>Help other students find their perfect home! <br/> Rate Your Dorm on the following qualities.</p>
         </div>
 
-        <div class="rating">
-            <div class="button-bar">
-                <button class="button icon super-ios7-star-outline" ng-class="{litup: number1 >= 1}" ng-click="clickStar(1)"></button>
-                <button class="button" ng-class="{litup: number1 >= 2}" ng-click="clickStar(2)"></button>
-                <button class="button" ng-class="{litup: number1 >= 3}" ng-click="clickStar(3)"></button>
-                <button class="button" ng-class="{litup: number1 >= 4}" ng-click="clickStar(4)"></button>
-                <button class="button" ng-class="{litup: number1 >= 5}" ng-click="clickStar(5)"></button>
+
+        <div>
+            <div class="title">
+                <p>Socialness:</p>
             </div>
-        </div>
-
-        <div class="title">
-            <p>Room Size:</p>
-        </div>
-        <div class="caption">
-            <p>Did your dorm feel like a closet?</p>
-        </div>
-        <div class="rating">
-            <div class="button-bar">
-                <button class="button button-clear" ng-class="Rate11" ng-click="select11()"></button>
-                <button class="button button-clear" ng-class="Rate12" ng-click="select12()"></button>
-                <button class="button button-clear" ng-class="Rate13" ng-click="select13()"></button>
-                <button class="button button-clear" ng-class="Rate14" ng-click="select14()"></button>
-                <button class="button button-clear" ng-class="Rate15" ng-click="select15()"></button>
+            <div class="caption">
+                <p>Neighborly floor-mates, social events, the works.</p>
             </div>
-        </div>
-        <div class="title">
-            <p>Rowdiness:</p>
-        </div>
-        <div class="caption">
-            <p>Remember those crazy floor parties?</p>
+            <span>{{review.socialness}} out of {{maxRating}}
+                <div star-rating rating-value="review.socialness" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+            </span>
         </div>
 
-        <div class="rating">
-            <div class="button-bar">
-                <button class="button button-clear" ng-class="Rate31" ng-click="select31()"></button>
-                <button class="button button-clear" ng-class="Rate32" ng-click="select32()"></button>
-                <button class="button button-clear" ng-class="Rate33" ng-click="select33()"></button>
-                <button class="button button-clear" ng-class="Rate34" ng-click="select34()"></button>
-                <button class="button button-clear" ng-class="Rate35" ng-click="select35()"></button>
+
+        <div>
+            <div class="title">
+                <p>Room Size:</p>
             </div>
-        </div>
-
-        <div class="title">
-            <p>Bathrooms:</p>
-        </div>
-        <div class="caption">
-            <p>Porcelain throne? Or was it pretty scary stuff?</p>
-        </div>
-        <div class="rating">
-            <div class="button-bar">
-                <button class="button button-clear" ng-class="Rate41" ng-click="select41()"></button>
-                <button class="button button-clear" ng-class="Rate42" ng-click="select42()"></button>
-                <button class="button button-clear" ng-class="Rate43" ng-click="select43()"></button>
-                <button class="button button-clear" ng-class="Rate44" ng-click="select44()"></button>
-                <button class="button button-clear" ng-class="Rate45" ng-click="select45()"></button>
+            <div class="caption">
+                <p>Did your dorm feel like a closet?</p>
             </div>
+            <span>{{review.roomsize}} out of {{maxRating}}
+                <div star-rating rating-value="review.roomsize" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+            </span>
         </div>
 
+        <div>
+            <div class="title">
+                <p>Rowdiness:</p>
+            </div>
+            <div class="caption">
+                <p>Remember those crazy floor parties?</p>
+            </div>
+            <span>{{review.rowdiness}} out of {{maxRating}}
+                <div star-rating rating-value="review.rowdiness" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+            </span>
+        </div>
+
+        <div>
+            <div class="title">
+                <p>Bathrooms:</p>
+            </div>
+            <div class="caption">
+                <p>Porcelain throne? Or was it pretty scary stuff?</p>
+            </div>
+            <span>{{review.bathrooms}} out of {{maxRating}}
+                <div star-rating rating-value="review.bathrooms" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+            </span>
+        </div>
+
+
+        <div>
+            <div class="title">
+                <p>Overall:</p>
+            </div>
+            <div class="caption">
+                <p>Rate your time in this dorm overall.</p>
+            </div>
+            <span>{{review.overall}} out of {{maxRating}}
+                <div star-rating rating-value="review.overall" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+            </span>
+        </div>
 
         <div class="comments">
             <div class="title"> <p>Comments:</p> </div>
@@ -84,6 +82,7 @@
                 <textarea placeholder="Comments" ng-model="review.comments"></textarea>
             </label>
         </div>
+
         <div class="submit">
             <button class="button button-outline button-dark" ng-click="submit()">&emsp;&emsp; Submit &emsp;&emsp;</button>
         </div>
