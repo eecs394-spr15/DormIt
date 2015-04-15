@@ -111,6 +111,51 @@ angular
           $scope.chevron = "super-chevron-up";
         else
           $scope.chevron = "super-chevron-down";
-      }
-      
+      };
+
+
+
+        $scope.Rate1 = "icon super-ios7-star-outline";
+        $scope.Rate2 = "icon super-ios7-star-outline";
+        $scope.Rate3 = "icon super-ios7-star-outline";
+        $scope.Rate4 = "icon super-ios7-star-outline";
+        $scope.Rate5 = "icon super-ios7-star-outline";
+        $scope.select1 = function(){
+            $scope.Rate1 = "icon super-star";
+            $scope.Rate2 = "icon super-ios7-star-outline";
+            $scope.Rate3 = "icon super-ios7-star-outline";
+            $scope.Rate4 = "icon super-ios7-star-outline";
+            $scope.Rate5 = "icon super-ios7-star-outline";
+        };
+        $scope.select2 = function(){
+            $scope.Rate1 = "icon super-star";
+            $scope.Rate2 = "icon super-star";
+            $scope.Rate3 = "icon super-ios7-star-outline";
+            $scope.Rate4 = "icon super-ios7-star-outline";
+            $scope.Rate5 = "icon super-ios7-star-outline";
+        };
+        $scope.select3 = function(){
+            $scope.Rate1 = "icon super-star";
+            $scope.Rate2 = "icon super-star";
+            $scope.Rate3 = "icon super-star";
+            $scope.Rate4 = "icon super-ios7-star-outline";
+            $scope.Rate5 = "icon super-ios7-star-outline";
+        };
+        $scope.select4 = function(){
+            $scope.Rate1 = "icon super-star";
+            $scope.Rate2 = "icon super-star";
+            $scope.Rate3 = "icon super-star";
+            $scope.Rate4 = "icon super-star";
+            $scope.Rate5 = "icon super-ios7-star-outline";
+        };
+        $scope.select5 = function(){
+            $scope.Rate1 = "icon super-star";
+            $scope.Rate2 = "icon super-star";
+            $scope.Rate3 = "icon super-star";
+            $scope.Rate4 = "icon super-star";
+            $scope.Rate5 = "icon super-star";
+        };
+
+
+
     });
