@@ -23,7 +23,7 @@ angular
       }
 
       $scope.sortByPrice = function() {
-        $scope.sort = 2;
+        $scope.sort = 1;
         $scope.reverse = !$scope.reverse;
         if ($scope.reverse == true) {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -48,7 +48,7 @@ angular
       }
 
       $scope.sortByRating = function() {
-        $scope.sort = 3;
+        $scope.sort = 2;
         $scope.reverse = !$scope.reverse;
         if ($scope.reverse) {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -108,50 +108,4 @@ angular
         else
           $scope.chevron = "super-chevron-down";
       };
-
-
-
-        $scope.Rate1 = "icon super-ios7-star-outline";
-        $scope.Rate2 = "icon super-ios7-star-outline";
-        $scope.Rate3 = "icon super-ios7-star-outline";
-        $scope.Rate4 = "icon super-ios7-star-outline";
-        $scope.Rate5 = "icon super-ios7-star-outline";
-        $scope.select1 = function(){
-            $scope.Rate1 = "icon super-star";
-            $scope.Rate2 = "icon super-ios7-star-outline";
-            $scope.Rate3 = "icon super-ios7-star-outline";
-            $scope.Rate4 = "icon super-ios7-star-outline";
-            $scope.Rate5 = "icon super-ios7-star-outline";
-        };
-        $scope.select2 = function(){
-            $scope.Rate1 = "icon super-star";
-            $scope.Rate2 = "icon super-star";
-            $scope.Rate3 = "icon super-ios7-star-outline";
-            $scope.Rate4 = "icon super-ios7-star-outline";
-            $scope.Rate5 = "icon super-ios7-star-outline";
-        };
-        $scope.select3 = function(){
-            $scope.Rate1 = "icon super-star";
-            $scope.Rate2 = "icon super-star";
-            $scope.Rate3 = "icon super-star";
-            $scope.Rate4 = "icon super-ios7-star-outline";
-            $scope.Rate5 = "icon super-ios7-star-outline";
-        };
-        $scope.select4 = function(){
-            $scope.Rate1 = "icon super-star";
-            $scope.Rate2 = "icon super-star";
-            $scope.Rate3 = "icon super-star";
-            $scope.Rate4 = "icon super-star";
-            $scope.Rate5 = "icon super-ios7-star-outline";
-        };
-        $scope.select5 = function(){
-            $scope.Rate1 = "icon super-star";
-            $scope.Rate2 = "icon super-star";
-            $scope.Rate3 = "icon super-star";
-            $scope.Rate4 = "icon super-star";
-            $scope.Rate5 = "icon super-star";
-        };
-
-
-
     });
