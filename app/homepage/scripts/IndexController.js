@@ -17,10 +17,9 @@ angular
         $scope.dormList = dormArray;
       });
 
-
       function compare(el1, el2, index) {
         return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
-      }
+      };
 
       $scope.sortByPrice = function() {
         $scope.sort = 1;
@@ -45,7 +44,7 @@ angular
             return 0;
           });
         }
-      }
+      };
 
       $scope.sortByRating = function() {
         $scope.sort = 2;
@@ -70,7 +69,7 @@ angular
             return 0;
           });
         }
-      }
+      };
 
       $scope.queryLoc = {};
       $scope.filterByLoc = function(dorm){
@@ -99,7 +98,7 @@ angular
           }
         }
         return true;
-      }
+      };
 
       $scope.chevron = "super-chevron-down";
       $scope.switchButton = function(){

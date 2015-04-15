@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-    <div class="dorm">
+    <div>
         <div class="images">
-            <img style="width: 100%; max-height: auto;" ng-src="{{dorm.img}}"/>
+            <img ng-src="{{dorm.img}}"/>
         </div>
         <div class="address">
             <p>{{dorm.address | uppercase}}</p>
@@ -52,7 +52,7 @@
                         </tr>
                         <tr>
                             <td class="column-name"><strong>Price</strong></td>
-                            <td class="column-data">${{dorm.price}} per quarter</td>
+                            <td class="column-data">{{dorm.price | currency:$:0}} per quarter</td>
                         </tr>
                         <tr>
                             <td class="column-name"><strong>Doubles</strong></td>
@@ -80,7 +80,13 @@
 
             <div ng-show="isSet(2)">
                 <div class="padding">
-                    <p><strong>Socialness</strong>:
+ <!--why this code doesn't work?
+                    <p>
+                        <strong>Socialness</strong>:
+                        <div static-star-rating rating-value = "dorm.socialness" max=5></div>
+                    </p>-->
+                    <p>
+                        <strong>Socialness</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 2"></button>
@@ -89,16 +95,18 @@
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Room Size</strong>:
+                    <p>
+                        <strong>Room Size</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize>= 3"></button>
+                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 3"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 4"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Rowdiness</strong>:
+                    <p>
+                        <strong>Rowdiness</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 2"></button>
@@ -107,7 +115,8 @@
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Bathrooms</strong>:
+                    <p>
+                        <strong>Bathrooms</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 2"></button>
@@ -121,7 +130,10 @@
 
             <div ng-show="isSet(3)">
                 <div class="padding">
-                    <p>Reviews</p>
+                    <div>
+                        <p>No reviews for {{dorm.name}}.</p>
+                        <p>Would you like to make a reivew for {{dorm.name}}?</p>
+                    </div>
                 </div>
             </div>
 

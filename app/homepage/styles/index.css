@@ -28,14 +28,14 @@
 }
 .active
 {
-    border-color:purple;
     background-color:purple;
 }
 .active div
 {
     color:white;
 }
-input[type="range"] {
+input[type="range"]
+{
     display: inline-block;
     overflow: hidden;
     margin-top: 5px;
