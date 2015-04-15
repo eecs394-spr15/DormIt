@@ -13,19 +13,15 @@
             <p>Help other students find their perfect home! <br/> Rate Your Dorm on the following qualities.</p>
         </div>
 
-        <div class="rating">
-            <div class="button-bar">
-                <button class="button icon super-ios7-star-outline" ng-class="{litup: number1 >= 1}" ng-click="clickStar(1)"></button>
-                <button class="button" ng-class="{litup: number1 >= 2}" ng-click="clickStar(2)"></button>
-                <button class="button" ng-class="{litup: number1 >= 3}" ng-click="clickStar(3)"></button>
-                <button class="button" ng-class="{litup: number1 >= 4}" ng-click="clickStar(4)"></button>
-                <button class="button" ng-class="{litup: number1 >= 5}" ng-click="clickStar(5)"></button>
+        <div>
+            <div class="title">
+                <p>Socialness:</p>
             </div>
             <div class="caption">
                 <p>Neighborly floor-mates, social events, the works.</p>
             </div>
             <span>{{review.socialness}} out of {{maxRating}}
-                <div star-rating rating-value="review.socialness" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+                <div star-rating rating-value="review.socialness" max="maxRating"></div>
             </span>
         </div>
 
@@ -38,7 +34,7 @@
                 <p>Did your dorm feel like a closet?</p>
             </div>
             <span>{{review.roomsize}} out of {{maxRating}}
-                <div star-rating rating-value="review.roomsize" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+                <div star-rating rating-value="review.roomsize" max="maxRating"></div>
             </span>
         </div>
 
@@ -50,7 +46,7 @@
                 <p>Remember those crazy floor parties?</p>
             </div>
             <span>{{review.rowdiness}} out of {{maxRating}}
-                <div star-rating rating-value="review.rowdiness" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+                <div star-rating rating-value="review.rowdiness" max="maxRating"></div>
             </span>
         </div>
 
@@ -62,7 +58,7 @@
                 <p>Porcelain throne? Or was it pretty scary stuff?</p>
             </div>
             <span>{{review.bathrooms}} out of {{maxRating}}
-                <div star-rating rating-value="review.bathrooms" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+                <div star-rating rating-value="review.bathrooms" max="maxRating"></div>
             </span>
         </div>
 
@@ -74,7 +70,7 @@
                 <p>Rate your time in this dorm overall.</p>
             </div>
             <span>{{review.overall}} out of {{maxRating}}
-                <div star-rating rating-value="review.overall" max="maxRating" on-rating-selected="getSelectedRating(rating)"></div>
+                <div star-rating rating-value="review.overall" max="maxRating"></div>
             </span>
         </div>
 
