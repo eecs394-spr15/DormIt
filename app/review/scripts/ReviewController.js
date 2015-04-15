@@ -28,6 +28,12 @@ angular
         $scope.Rate13 = "icon super-ios7-star-outline";
         $scope.Rate14 = "icon super-ios7-star-outline";
         $scope.Rate15 = "icon super-ios7-star-outline";
+
+        $scope.number1 = 0;
+        $scope.clickStar = function(starNumber){
+            $scope.number1 = starNumber;
+        };
+
         $scope.select11 = function(){
             $scope.Rate11 = "icon super-star";
             $scope.Rate12 = "icon super-ios7-star-outline";
