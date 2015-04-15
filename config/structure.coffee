@@ -3,10 +3,7 @@
 module.exports =
 
   rootView:
-    location: "review#review"
-    #location:"homepage#index"
-  # rootView:
-  #   location: "example#getting-started"
+    location:"homepage#index"
 
 #
 #   options:
