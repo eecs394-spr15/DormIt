@@ -63,8 +63,8 @@
       <super-navigate ng-repeat="dorm in (filtered= (dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType|filter:filterByStar))" class="item item-thumbnail-left" view-id="dormPage#dorm?id={{dorm.id}}">
         <img ng-src="{{dorm.img}}">
         <h2 class="name">{{dorm.name}}</h2>
-        <p class="type">{{dorm.location}} | {{dorm.size}}</p>
-        <p class="type">{{dorm.type}}</p>
+        <p class="type">{{dorm.size}} | ${{dorm.price}}/quarter</p>
+        <p class="type">{{dorm.location}} | {{dorm.type}}</p>
         <img src="http://blog.sweetiq.com/wp-content/uploads/2012/07/3-5-stars.png" height="4%" width = "50%">
       </super-navigate>
     </li>
