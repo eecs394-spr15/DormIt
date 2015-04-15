@@ -36,6 +36,9 @@ angular
         $scope.clickStar = function(starNumber){
             $scope.number1 = starNumber;
         };
+        $scope.isStar = function(value){
+            return $scope.number1 >= value;
+        };
 
         $scope.select11 = function(){
             $scope.Rate11 = "icon super-star";
