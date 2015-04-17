@@ -21,6 +21,17 @@
     background-color:#F0F0F0;
     border: 1px #E8E8E8;
 }
+.clearButton
+{
+    padding-top:5px;
+    padding-bottom:25px;
+    width:60px;
+    height:20px;
+    font-size:15px;
+    border-radius: 10%;
+    color: purple;
+    border: 1px #E8E8E8;
+}
 .searchbar
 {
     padding-top:2px;
