@@ -72,6 +72,21 @@ angular
         }
       }
 
+      $scope.clear = function() {
+        $scope.sort = 0;
+        $scope.queryLoc = {};
+        $scope.querySize = {};
+        $scope.queryType = {};
+          $scope.dormList = $scope.dormList.sort(function (a, b) {
+            var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
+            if (nameA < nameB)
+              return -1;
+            if (nameA > nameB)
+              return 1;
+            return 0;
+          });
+      }
+
       $scope.queryLoc = {};
       $scope.filterByLoc = function(dorm){
         return $scope.queryLoc[dorm.location] || noFilter($scope.queryLoc);

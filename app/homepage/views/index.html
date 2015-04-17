@@ -11,6 +11,9 @@
     <label class=" item-input-wrapper">
       <input ng-model="query.name" type="text" placeholder="Dorm Name">
     </label>
+    <button class="clearButton" ng-click="clear()">
+      <div>Clear</div>
+    </button>
     <button type="button" id = td_id class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()">
     </button>
   </div>
@@ -54,7 +57,6 @@
           <div>Rating</div>
         </button>
       </li>
-
     </ul>
   </div>
 
