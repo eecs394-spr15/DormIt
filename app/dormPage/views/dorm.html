@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-    <div class="dorm">
+
         <div class="images">
             <img style="width: 100%; max-height: auto;" ng-src="{{dorm.img}}"/>
         </div>
@@ -126,6 +126,10 @@
             </div>
 
         </section>
-
+    <div>
+        <a href="https://www.google.com/maps/place/{{dorm.address}}">
+            <button class="findOnMap">Find it on map</button>
+        </a>
+    </div>
     </div>
 </div>
