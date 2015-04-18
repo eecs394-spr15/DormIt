@@ -62,3 +62,20 @@ input[type="range"]
     background-repeat: no-repeat;
     -webkit-appearance: none;
 }
+.item-icon-right
+{
+    padding: 1px 1px 1px 1px;
+    border-color:white;
+}
+.item-icon-right .icon
+{
+    right:-3px;
+    font-size:15px;
+    color: grey;
+}
+.item-thumbnail-left
+{
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-right:3px;
+}
