@@ -25,10 +25,9 @@
 {
     padding-top:5px;
     padding-bottom:25px;
-    width:60px;
+    width:50px;
     height:20px;
     font-size:15px;
-    border-radius: 10%;
     color: purple;
     border: 1px #E8E8E8;
 }
@@ -62,4 +61,21 @@ input[type="range"]
     background-size: 99% 2px;
     background-repeat: no-repeat;
     -webkit-appearance: none;
+}
+.item-icon-right
+{
+    padding: 1px 1px 1px 1px;
+    border-color:white;
+}
+.item-icon-right .icon
+{
+    right:-3px;
+    font-size:15px;
+    color: grey;
+}
+.item-thumbnail-left
+{
+    padding-top:3px;
+    padding-bottom:3px;
+    padding-right:3px;
 }

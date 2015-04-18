@@ -14,7 +14,9 @@
             <img ng-src="{{dorm.img}}"/>
         </div>
         <div class="address">
-            <p>{{dorm.address | uppercase}}</p>
+            <a class="item item-icon-right" href="https://www.google.com/maps/place/{{dorm.address}}">
+                {{dorm.address | uppercase}}<i class="icon super-map"></i>
+            </a>
         </div>
 
         <section>
@@ -24,7 +26,7 @@
                     <div><strong>Stats&Info</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(2)" ng-class="{ active: isSet(2) }">
-                    <div><strong>Rate</strong></div>
+                    <div><strong>Rating</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                     <div><strong>Reviews</strong></div>
@@ -53,10 +55,6 @@
                             <p class="column-data" ng-hide="dorm.dininghall">No</p>
                         </li>
                         <li class="row">
-                            <p class="column-name"><strong>Price</strong></p>
-                            <p class="column-data">{{dorm.price | currency:$:0}} per quarter</p>
-                        </li>
-                        <li class="row">
                             <p class="column-name"><strong>Doubles</strong></p>
                             <p class="column-data">{{dorm.double}}</p>
                         </li>
@@ -76,7 +74,70 @@
                             <p class="column-name"><strong>Others</strong></p>
                             <p class="column-data">{{dorm.other}}</p>
                         </li>
+                        <li class="price-title">
+                            <p><strong>Price per Quarter</strong></p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricesingleQ > 0">
+                            <p class="column-name"><strong>Single</strong></p>
+                            <p class="column-data">{{dorm.pricesingleQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.priceLsingleQ > 0">
+                            <p class="column-name"><strong>Large Single</strong></p>
+                            <p class="column-data">{{dorm.priceLsingleQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricesingleBathQ > 0">
+                            <p class="column-name"><strong>Single w/ Bath</strong></p>
+                            <p class="column-data">{{dorm.pricesingleBathQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricedoubleQ > 0">
+                            <p class="column-name"><strong>Double</strong></p>
+                            <p class="column-data">{{dorm.pricedoubleQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.ConDoubleQ > 0">
+                            <p class="column-name"><strong>Connection Double</strong></p>
+                            <p class="column-data">{{dorm.ConDoubleQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricedoubleBathQ > 0">
+                            <p class="column-name"><strong>Double w/ Bath</strong></p>
+                            <p class="column-data">{{dorm.pricedoubleBathQ | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricetripleQ > 0">
+                            <p class="column-name"><strong>Triple</strong></p>
+                            <p class="column-data">{{dorm.pricetripleQ | currency:$:0}}</p>
+                        </li>
+                        <li class="price-title">
+                            <p><strong>Price for Full Academic Year</strong></p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricesingleY > 0">
+                            <p class="column-name"><strong>Single</strong></p>
+                            <p class="column-data">{{dorm.pricesingleY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.priceLsingleY > 0">
+                            <p class="column-name"><strong>Large Single</strong></p>
+                            <p class="column-data">{{dorm.priceLsingleY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricesingleBathY > 0">
+                            <p class="column-name"><strong>Single w/ Bath</strong></p>
+                            <p class="column-data">{{dorm.pricesingleBathY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricedoubleY > 0">
+                            <p class="column-name"><strong>Double</strong></p>
+                            <p class="column-data">{{dorm.pricedoubleY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.ConDoubleY > 0">
+                            <p class="column-name"><strong>Connection Double</strong></p>
+                            <p class="column-data">{{dorm.ConDoubleY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricedoubleBathY > 0">
+                            <p class="column-name"><strong>Double w/ Bath</strong></p>
+                            <p class="column-data">{{dorm.pricedoubleBathY | currency:$:0}}</p>
+                        </li>
+                        <li class="row" ng-show="dorm.pricetripleY > 0">
+                            <p class="column-name"><strong>Triple</strong></p>
+                            <p class="column-data">{{dorm.pricetripleY | currency:$:0}}</p>
+                        </li>
                     </ul>
+
                 </div>
             </div>
 
@@ -90,41 +151,41 @@
                     <p>
                         <strong>Socialness</strong>:
                         <span class="review-data">
-                            <button class="icon button-clear super-star" ng-show="dorm.socialness >= 1"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.socialness >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.socialness >= 3"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.socialness >= 4"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.socialness >= 5"></button>
+                            <i class="icon super-star" ng-show="dorm.socialness >= 1"></i>
+                            <i class="icon super-star" ng-show="dorm.socialness >= 2"></i>
+                            <i class="icon super-star" ng-show="dorm.socialness >= 3"></i>
+                            <i class="icon super-star" ng-show="dorm.socialness >= 4"></i>
+                            <i class="icon super-star" ng-show="dorm.socialness >= 5"></i>
                         </span>
                     </p>
                     <p>
                         <strong>Room Size</strong>:
                         <span class="review-data">
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 1"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 3"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 4"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 5"></button>
+                            <i class="icon super-star" ng-show="dorm.roomsize >= 1"></i>
+                            <i class="icon super-star" ng-show="dorm.roomsize >= 2"></i>
+                            <i class="icon super-star" ng-show="dorm.roomsize >= 3"></i>
+                            <i class="icon super-star" ng-show="dorm.roomsize >= 4"></i>
+                            <i class="icon super-star" ng-show="dorm.roomsize >= 5"></i>
                         </span>
                     </p>
                     <p>
                         <strong>Rowdiness</strong>:
                         <span class="review-data">
-                            <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 1"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 3"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 4"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 5"></button>
+                            <i class="icon super-star" ng-show="dorm.rowdiness >= 1"></i>
+                            <i class="icon super-star" ng-show="dorm.rowdiness >= 2"></i>
+                            <i class="icon super-star" ng-show="dorm.rowdiness >= 3"></i>
+                            <i class="icon super-star" ng-show="dorm.rowdiness >= 4"></i>
+                            <i class="icon super-star" ng-show="dorm.rowdiness >= 5"></i>
                         </span>
                     </p>
                     <p>
                         <strong>Bathrooms</strong>:
                         <span class="review-data">
-                            <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 1"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 3"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 4"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 5"></button>
+                            <i class="icon super-star" ng-show="dorm.bathrooms >= 1"></i>
+                            <i class="icon super-star" ng-show="dorm.bathrooms >= 2"></i>
+                            <i class="icon super-star" ng-show="dorm.bathrooms >= 3"></i>
+                            <i class="icon super-star" ng-show="dorm.bathrooms >= 4"></i>
+                            <i class="icon super-star" ng-show="dorm.bathrooms >= 5"></i>
                         </span>
                     </p>
                 </div>
@@ -140,10 +201,5 @@
             </div>
 
         </section>
-        <div>
-            <a href="https://www.google.com/maps/place/{{dorm.address}}">
-                <button class="findOnMap">Find it on map</button>
-            </a>
-        </div>
     </div>
 </div>

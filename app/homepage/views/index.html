@@ -11,12 +11,10 @@
     <label class="item-input-wrapper">
       <input ng-model="query.name" type="text" placeholder="Dorm Name">
     </label>
-    <button type="button" class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()">
     <button class="clearButton" ng-click="clear()">
       <div>Clear</div>
     </button>
-    <button type="button" id = td_id class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()">
-    </button>
+    <button type="button" class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()"></button>
   </div>
 
   <div id="demo" class="collapse">
@@ -66,10 +64,13 @@
     <li>
       <super-navigate ng-repeat="dorm in (filtered= (dormList|filter:query|filter:filterByLoc|filter:filterBySize|filter:filterByType|filter:filterByStar))" class="item item-thumbnail-left" view-id="dormPage#dorm?id={{dorm.id}}">
         <img ng-src="{{dorm.img}}">
-        <h2 class="name">{{dorm.name}}</h2>
-        <p class="type">{{dorm.size}} | {{dorm.price | currency:$:0}}/quarter</p>
-        <p class="type">{{dorm.location}} | {{dorm.type}}</p>
-        <div static-star-rating rating-value="dorm.star" max=5></div>
+          <div class="item item-icon-right">
+              <h2 class="name">{{dorm.name}}</h2>
+              <p class="type">{{dorm.size}} | {{dorm.price | currency:$:0}}/quarter</p>
+              <p class="type">{{dorm.location}} | {{dorm.type}}</p>
+              <div static-star-rating rating-value="dorm.star" max=5></div>
+              <i class="icon super-chevron-right"></i>
+          </div>
       </super-navigate>
     </li>
   </ul>
