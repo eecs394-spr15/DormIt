@@ -11,17 +11,19 @@
     width: 100%;
     max-height: auto;
 }
-.address
+.address a
 {
-    display: block;
-    height: auto;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    font-size: 15px;
-    text-align: left;
+    font-size:15px;
     color: #585858;
     font-style: italic;
+}
+.item
+{
+    padding-top:5px;
+    padding-left:5px;
+    padding-right:2px;
+    height:28px;
+    border-color:white;
 }
 .tab
 {
@@ -29,7 +31,6 @@
     background: purple;
     padding: 10px;
     border: 1px solid #ccc;
-
 }
 .active
  {
@@ -49,6 +50,13 @@
 .infolist
 {
     padding:5px;
+}
+.price-title
+{
+    text-align: center;
+    padding-top:5px;
+    height:30px;
+    margin-bottom:0px;
 }
 .column-name
 {
@@ -73,9 +81,10 @@
     border-bottom: 1px solid #E8E8E8;
     margin-bottom:0px;
 }
-}
-.findOnMap
+.review-data i
 {
-    text-align: center;
-    margin-left: 35%;
+    font-size:20px;
+    color:purple;
+    position:relative;
+    bottom:-2px;
 }
