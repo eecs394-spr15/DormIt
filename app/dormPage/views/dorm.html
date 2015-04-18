@@ -9,9 +9,9 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-
+    <div>
         <div class="images">
-            <img style="width: 100%; max-height: auto;" ng-src="{{dorm.img}}"/>
+            <img ng-src="{{dorm.img}}"/>
         </div>
         <div class="address">
             <p>{{dorm.address | uppercase}}</p>
@@ -32,55 +32,63 @@
             </ul>
 
             <div ng-show="isSet(1)">
-                <div class="padding">
-                    <table>
-                        <tr>
-                            <td class="column-name"><strong>Location</strong></td>
-                            <td class="column-data">{{dorm.location}} Campus</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Type</strong></td>
-                            <td class="column-data">{{dorm.type}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Air Conditioning</strong></td>
-                            <td class="column-data"><p ng-show="dorm.airconditioning">Yes</p><p ng-hide="dorm.airconditioning">No</p></td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Dining Hall On-site</strong></td>
-                            <td class="column-data"><p ng-show="dorm.dininghall">Yes</p><p ng-hide="dorm.dininghall">No</p></td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Price</strong></td>
-                            <td class="column-data">${{dorm.price}} per quarter</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Doubles</strong></td>
-                            <td class="column-data">{{dorm.double}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Singles</strong></td>
-                            <td class="column-data">{{dorm.single}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Triples</strong></td>
-                            <td class="column-data">{{dorm.triple}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Residents</strong></td>
-                            <td class="column-data">{{dorm.single+dorm.double*2+dorm.triple*3}}</td>
-                        </tr>
-                        <tr>
-                            <td class="column-name"><strong>Others</strong></td>
-                            <td class="column-data">{{dorm.other}}</td>
-                        </tr>
-                    </table>
+                <div class="infolist">
+                    <ul>
+                        <li class="row">
+                            <p class="column-name"><strong>Location</strong></p>
+                            <p class="column-data">{{dorm.location}} Campus</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Type</strong></p>
+                            <p class="column-data">{{dorm.type}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Air Conditioning</strong></p>
+                            <p class="column-data" ng-show="dorm.airconditioning">Yes</p>
+                            <p class="column-data" ng-hide="dorm.airconditioning">No</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Dining Hall On-site</strong></p>
+                            <p class="column-data" ng-show="dorm.dininghall">Yes</p>
+                            <p class="column-data" ng-hide="dorm.dininghall">No</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Price</strong></p>
+                            <p class="column-data">{{dorm.price | currency:$:0}} per quarter</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Doubles</strong></p>
+                            <p class="column-data">{{dorm.double}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Singles</strong></p>
+                            <p class="column-data">{{dorm.single}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Triples</strong></p>
+                            <p class="column-data">{{dorm.triple}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Residents</strong></p>
+                            <p class="column-data">{{dorm.single+dorm.double*2+dorm.triple*3}}</p>
+                        </li>
+                        <li class="row">
+                            <p class="column-name"><strong>Others</strong></p>
+                            <p class="column-data">{{dorm.other}}</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <div ng-show="isSet(2)">
                 <div class="padding">
-                    <p><strong>Socialness</strong>:
+ <!--why this code doesn't work?
+                    <p>
+                        <strong>Socialness</strong>:
+                        <div static-star-rating rating-value = "dorm.socialness" max=5></div>
+                    </p>-->
+                    <p>
+                        <strong>Socialness</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 2"></button>
@@ -89,16 +97,18 @@
                             <button class="icon button-clear super-star" ng-show="dorm.socialness >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Room Size</strong>:
+                    <p>
+                        <strong>Room Size</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 2"></button>
-                            <button class="icon button-clear super-star" ng-show="dorm.roomsize>= 3"></button>
+                            <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 3"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 4"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.roomsize >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Rowdiness</strong>:
+                    <p>
+                        <strong>Rowdiness</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 2"></button>
@@ -107,7 +117,8 @@
                             <button class="icon button-clear super-star" ng-show="dorm.rowdiness >= 5"></button>
                         </span>
                     </p>
-                    <p><strong>Bathrooms</strong>:
+                    <p>
+                        <strong>Bathrooms</strong>:
                         <span class="review-data">
                             <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 1"></button>
                             <button class="icon button-clear super-star" ng-show="dorm.bathrooms >= 2"></button>
@@ -121,15 +132,18 @@
 
             <div ng-show="isSet(3)">
                 <div class="padding">
-                    <p>Reviews</p>
+                    <div>
+                        <p>No reviews for {{dorm.name}}.</p>
+                        <p>Would you like to make a reivew for {{dorm.name}}?</p>
+                    </div>
                 </div>
             </div>
 
         </section>
-    <div>
-        <a href="https://www.google.com/maps/place/{{dorm.address}}">
-            <button class="findOnMap">Find it on map</button>
-        </a>
-    </div>
+        <div>
+            <a href="https://www.google.com/maps/place/{{dorm.address}}">
+                <button class="findOnMap">Find it on map</button>
+            </a>
+        </div>
     </div>
 </div>

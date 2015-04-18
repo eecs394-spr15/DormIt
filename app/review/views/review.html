@@ -7,8 +7,7 @@
         </super-navbar-title>
     </super-navbar>
 
-
-    <div class="review-page" style="margin-top: 6px;">
+    <div class="review-page">
         <div class="caption">
             <p>Help other students find their perfect home! <br/> Rate your dorm on the following qualities.</p>
         </div>
@@ -20,7 +19,7 @@
             <div class="caption">
                 <p>Neighborly floor-mates, social events, the works.</p>
             </div>
-            <span>{{review.socialness}} out of {{maxRating}}
+            <span class="rating">{{review.socialness}} out of {{maxRating}}
                 <div star-rating rating-value="review.socialness" max="maxRating"></div>
             </span>
         </div>
@@ -33,7 +32,7 @@
             <div class="caption">
                 <p>Did your dorm feel like a closet?</p>
             </div>
-            <span>{{review.roomsize}} out of {{maxRating}}
+            <span class="rating">{{review.roomsize}} out of {{maxRating}}
                 <div star-rating rating-value="review.roomsize" max="maxRating"></div>
             </span>
         </div>
@@ -45,7 +44,7 @@
             <div class="caption">
                 <p>Remember those crazy floor parties?</p>
             </div>
-            <span>{{review.rowdiness}} out of {{maxRating}}
+            <span class="rating">{{review.rowdiness}} out of {{maxRating}}
                 <div star-rating rating-value="review.rowdiness" max="maxRating"></div>
             </span>
         </div>
@@ -57,7 +56,7 @@
             <div class="caption">
                 <p>Porcelain throne? Or was it pretty scary stuff?</p>
             </div>
-            <span>{{review.bathrooms}} out of {{maxRating}}
+            <span class="rating">{{review.bathrooms}} out of {{maxRating}}
                 <div star-rating rating-value="review.bathrooms" max="maxRating"></div>
             </span>
         </div>
@@ -69,13 +68,13 @@
             <div class="caption">
                 <p>Rate your time in this dorm overall.</p>
             </div>
-            <span>{{review.overall}} out of {{maxRating}}
+            <span class="rating">{{review.overall}} out of {{maxRating}}
                 <div star-rating rating-value="review.overall" max="maxRating"></div>
             </span>
         </div>
 
         <div class="comments">
-            <div class="title"> <p>Comments:</p> </div>
+            <div class="title"> <p>Comments:</p></div>
             <label class="item item-input">
                 <textarea placeholder="Comments" ng-model="review.comments"></textarea>
             </label>
