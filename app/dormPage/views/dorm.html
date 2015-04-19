@@ -26,10 +26,10 @@
                     <div><strong>Info</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(2)" ng-class="{ active: isSet(2) }">
-                    <div><strong>Rating</strong></div>
+                    <div><strong>Reviews</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                    <div><strong>Reviews</strong></div>
+                    <div><strong>See Dorm</strong></div>
                 </li>
             </ul>
 
@@ -143,11 +143,6 @@
 
             <div ng-show="isSet(2)">
                 <div class="padding">
- <!--why this code doesn't work?
-                    <p>
-                        <strong>Socialness</strong>:
-                        <div static-star-rating rating-value = "dorm.socialness" max=5></div>
-                    </p>-->
                     <p>
                         <strong>Socialness</strong>:
                         <span class="review-data">
@@ -187,6 +182,12 @@
                             <i class="icon super-star" ng-show="dorm.bathrooms >= 4"></i>
                             <i class="icon super-star" ng-show="dorm.bathrooms >= 5"></i>
                         </span>
+                    </p>
+                    <p>
+                        <strong>Review:</strong>
+                                <div ng-repeat="c in comments">
+                                        {{c.comments}}
+                                </div>
                     </p>
                 </div>
             </div>
