@@ -1,6 +1,6 @@
 .rating {
   color: #a9a9a9;
-  margin: 0;
+  margin: 2px;
   padding: 0;
 }
 ul.rating {
@@ -15,5 +15,5 @@ ul.rating {
   cursor: pointer;
 }
 .rating .filled {
-  color: #4e015c;
+  color: purple;
 }
