@@ -135,14 +135,12 @@
                             <p class="column-data">{{dorm.pricetripleY | currency:$:0}}</p>
                         </li>
                     </ul>
-
                 </div>
             </div>
 
             <div ng-show="isSet(2)">
                 <div class="padding">
-                    <div>(Map here)</div>
-                    <div>(Pictures here)</div>
+                    (map and pics here)
                 </div>
             </div>
 
@@ -156,8 +154,12 @@
 
                 <div class="padding">
                     <div>
-                        <p>No reviews for {{dorm.name}}.</p>
-                        <p>Would you like to make a reivew for {{dorm.name}}?</p>
+                        <p>
+                            <strong>Review:</strong>
+                        <div ng-repeat="c in comments">
+                            {{c.comments}}
+                        </div>
+                        </p>
                     </div>
                 </div>
             </div>

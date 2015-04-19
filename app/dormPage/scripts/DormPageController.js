@@ -19,5 +19,13 @@ angular
                 {title:'Bathrooms',rate:res.attributes.bathrooms},
                 {title:'Overall',rate:res.attributes.star}];
         });
+
+        parse.getReviews(dormId).then(function(res){
+            var commentList = [];
+            res.forEach(function(value){
+                commentList.push(value.attributes);
+            });
+            $scope.comments = commentList;
+        })
     });
 

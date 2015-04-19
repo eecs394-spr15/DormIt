@@ -22,6 +22,15 @@ angular.module('services', ['parse-angular'])
             return sub.save(review);
         };
 
+        parseFactory.getReviews = function(id){
+            var query = new Parse.Query('reviews');
+            query.equalTo("dorm", id);
+            var ratings = query.find();
+
+
+            return ratings;
+        };
+
         return parseFactory
 
     });
