@@ -14,19 +14,17 @@
             <img ng-src="{{dorm.img}}"/>
         </div>
         <div class="address">
-            <a class="item item-icon-right" href="https://www.google.com/maps/place/{{dorm.address}}">
-                {{dorm.address | uppercase}}<i class="icon super-map"></i>
-            </a>
+            {{dorm.address | uppercase}}
         </div>
 
         <section>
 
             <ul class="row">
                 <li class="tab col col-33" ng-click="setTab(1)" ng-class="{ active: isSet(1) }">
-                    <div><strong>Stats&Info</strong></div>
+                    <div><strong>Info</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(2)" ng-class="{ active: isSet(2) }">
-                    <div><strong>Rating</strong></div>
+                    <div><strong>Pictures</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                     <div><strong>Reviews</strong></div>
@@ -143,55 +141,19 @@
 
             <div ng-show="isSet(2)">
                 <div class="padding">
- <!--why this code doesn't work?
-                    <p>
-                        <strong>Socialness</strong>:
-                        <div static-star-rating rating-value = "dorm.socialness" max=5></div>
-                    </p>-->
-                    <p>
-                        <strong>Socialness</strong>:
-                        <span class="review-data">
-                            <i class="icon super-star" ng-show="dorm.socialness >= 1"></i>
-                            <i class="icon super-star" ng-show="dorm.socialness >= 2"></i>
-                            <i class="icon super-star" ng-show="dorm.socialness >= 3"></i>
-                            <i class="icon super-star" ng-show="dorm.socialness >= 4"></i>
-                            <i class="icon super-star" ng-show="dorm.socialness >= 5"></i>
-                        </span>
-                    </p>
-                    <p>
-                        <strong>Room Size</strong>:
-                        <span class="review-data">
-                            <i class="icon super-star" ng-show="dorm.roomsize >= 1"></i>
-                            <i class="icon super-star" ng-show="dorm.roomsize >= 2"></i>
-                            <i class="icon super-star" ng-show="dorm.roomsize >= 3"></i>
-                            <i class="icon super-star" ng-show="dorm.roomsize >= 4"></i>
-                            <i class="icon super-star" ng-show="dorm.roomsize >= 5"></i>
-                        </span>
-                    </p>
-                    <p>
-                        <strong>Rowdiness</strong>:
-                        <span class="review-data">
-                            <i class="icon super-star" ng-show="dorm.rowdiness >= 1"></i>
-                            <i class="icon super-star" ng-show="dorm.rowdiness >= 2"></i>
-                            <i class="icon super-star" ng-show="dorm.rowdiness >= 3"></i>
-                            <i class="icon super-star" ng-show="dorm.rowdiness >= 4"></i>
-                            <i class="icon super-star" ng-show="dorm.rowdiness >= 5"></i>
-                        </span>
-                    </p>
-                    <p>
-                        <strong>Bathrooms</strong>:
-                        <span class="review-data">
-                            <i class="icon super-star" ng-show="dorm.bathrooms >= 1"></i>
-                            <i class="icon super-star" ng-show="dorm.bathrooms >= 2"></i>
-                            <i class="icon super-star" ng-show="dorm.bathrooms >= 3"></i>
-                            <i class="icon super-star" ng-show="dorm.bathrooms >= 4"></i>
-                            <i class="icon super-star" ng-show="dorm.bathrooms >= 5"></i>
-                        </span>
-                    </p>
+                    <div>(Map here)</div>
+                    <div>(Pictures here)</div>
                 </div>
             </div>
 
             <div ng-show="isSet(3)">
+                <div class="padding">
+                    <div class="rates" ng-repeat="rating in ratelist">
+                        <strong>{{rating.title}}</strong>:
+                        <span class="review-data" static-star-rating rating-value="rating.rate" max="rating.rate"></span>
+                    </div>
+                </div>
+
                 <div class="padding">
                     <div>
                         <p>No reviews for {{dorm.name}}.</p>
