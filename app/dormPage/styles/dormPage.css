@@ -78,10 +78,46 @@
 .rates
 {
     height:30px;
+    font-size:15px;
 }
-.review-data
+.rates span
 {
     font-size:15px;
     position:relative;
     bottom:-1px;
+}
+.review-list
+{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.review-title
+{
+    font-size:15px;
+}
+.review-content
+ {
+     border-bottom:1px solid #ddd;
+ }
+.each-review
+{
+    border-top:1px solid #ddd;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid white;
+    padding-left:5px;
+    padding-right:5px;
+    text-align:justify;
+}
+.comments
+{
+    font-size:12px;
+}
+.button.button-purple
+{
+    border-color: purple;
+    background-color: purple;
+    color: #fff;
+    height:28px;
+    font-size:18px;
 }

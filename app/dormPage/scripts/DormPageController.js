@@ -25,7 +25,7 @@ angular
             res.forEach(function(value){
                 commentList.push(value.attributes);
             });
-            $scope.comments = commentList;
+            $scope.reviewList= commentList;
         })
     });
 

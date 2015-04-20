@@ -26,8 +26,6 @@ angular.module('services', ['parse-angular'])
             var query = new Parse.Query('reviews');
             query.equalTo("dorm", id);
             var ratings = query.find();
-
-
             return ratings;
         };
 
