@@ -1,6 +1,7 @@
 angular
     .module('dormPage')
-    .controller('DormPageController', function($scope, supersonic, parse) {
+    .controller('DormPageController', function($scope, supersonic, parse, $sce) {
+
         $scope.tab=1;
         $scope.setTab = function(newValue){
             $scope.tab = newValue;
@@ -13,6 +14,7 @@ angular
         parse.getDorm(dormId).then(function(res){
             $scope.dorm = res.attributes;
             $scope.dorm.id = res.id;
+            $scope.dormAddrCode = $sce.trustAsResourceUrl(res.attributes.addrCode);
             $scope.ratelist = [{title:'Socialness', rate:res.attributes.socialness},
                 {title:'Room size',rate:res.attributes.roomsize},
                 {title:'Rowdiness',rate:res.attributes.rowdiness},
@@ -27,5 +29,8 @@ angular
             });
             $scope.reviewList= commentList;
         })
+
     });
+
+
 

@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-    <div>
+    
         <div class="images">
             <img ng-src="{{dorm.img}}"/>
         </div>
@@ -137,11 +137,17 @@
                 </div>
             </div>
 
+            <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
             <div ng-show="isSet(2)">
                 <div class="padding">
-                    (map and pics here)
+                    <div id="googleMap" class="collapse">
+                        <embed ng-src="{{dormAddrCode}}" width="100%" height="400"></embed>
+                    </div>
                 </div>
             </div>
+
 
             <div ng-show="isSet(3)">
                 <div class="padding">

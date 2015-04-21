@@ -10,5 +10,9 @@ module.exports =
       id: "index"
       location: "homepage#index"
     }
+    {
+      id: "map"
+      location: "https://www.google.com/maps/place/{{dorm.address}}"
+    }
   ]
 
