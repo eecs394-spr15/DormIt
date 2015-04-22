@@ -137,9 +137,6 @@
                 </div>
             </div>
 
-            <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-
-
             <div ng-show="isSet(2)">
                 <div class="padding">
                     <div id="googleMap" class="collapse">
@@ -169,6 +166,7 @@
                         <div class="review-content">
                             <div class="each-review" ng-repeat="c in reviewList">
                                 <span static-star-rating rating-value="c.overall" max="5"></span>
+                                <span class="date comments">{{c.timestamp}}</span>
                                 <div class="comments">
                                     <p ng-show = "c.comments.length > 0">{{c.comments}}
                                     <p ng-hide = "c.comments.length > 0">No comments.</p></p>

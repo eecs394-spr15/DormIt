@@ -23,8 +23,8 @@ angular.module('services', ['parse-angular'])
                 res.set('star', calcAverage(reviewCount, res.get('star'), review.overall));
                 res.set('socialness', calcAverage(reviewCount, res.get('socialness'), review.socialness));
                 res.set('roomsize', calcAverage(reviewCount, res.get('roomsize'), review.roomsize));
-                res.set('rowdiness', calcAverage(reviewCount, res.get('rowdiness'), review.rowdiness));
-                res.set('bathrooms', calcAverage(reviewCount, res.get('bathrooms'), review.bathrooms));
+                res.set('food', calcAverage(reviewCount, res.get('food'), review.food));
+                res.set('amenities', calcAverage(reviewCount, res.get('amenities'), review.amenities));
                 res.set('numReviews', reviewCount+1);
                 res.save()
             });
@@ -38,6 +38,7 @@ angular.module('services', ['parse-angular'])
         parseFactory.getReviews = function(id){
             var query = new Parse.Query('reviews');
             query.equalTo("dorm", id);
+            query.descending("createdAt");
             var ratings = query.find();
             return ratings;
         };
