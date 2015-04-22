@@ -1,4 +1,3 @@
-<html>
 <div ng-controller="DormPageController">
 
     <super-navbar>
@@ -9,7 +8,7 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-
+    
         <div class="images">
             <img ng-src="{{dorm.img}}" height="{{imageHeight}}"/>
         </div>
@@ -24,7 +23,7 @@
                     <div><strong>Info</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(2)" ng-class="{ active: isSet(2) }">
-                    <div><strong>Pictures</strong></div>
+                    <div><strong>Map</strong></div>
                 </li>
                 <li class="tab col col-33" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                     <div><strong>Reviews</strong></div>
@@ -149,13 +148,21 @@
                 </div>
             </div>
 
-
             <div ng-show="isSet(3)">
                 <div class="padding">
-                    <div class="rates" ng-repeat="rating in ratelist">
-                        <strong>{{rating.title}}</strong>:
-                        <span static-star-rating rating-value="rating.rate" max="rating.rate"></span>
+                    <div>
+                        <p>Average rating for {{dorm.name}} from {{reviewList.length}} reviewers.</p>
                     </div>
+                    <ul>
+                        <li class="row" ng-repeat="rating in ratelist">
+                            <p class="rating-name"><strong>{{rating.title}}</strong></p>
+                            <p class="rating-data"><span static-star-rating rating-value="rating.rate" max="5"></span></p>
+                        </li>
+                    </ul>
+
+                    <super-navigate view-id="review#review?id={{dorm.id}}" action="click">
+                        <button class="button button-purple button-block">Post a review</button>
+                    </super-navigate>
 
                     <div class="review-list">
                         <p class="review-title"><strong>Reviews</strong>:</p>
@@ -173,9 +180,6 @@
                         </div>
                     </div>
 
-                    <super-navigate view-id="review#review?id={{dorm.id}}" action="click">
-                        <button class="button button-purple button-block">Post a review</button>
-                    </super-navigate>
 
                 </div>
             </div>
@@ -183,4 +187,3 @@
         </section>
     </div>
 </div>
-</html>
