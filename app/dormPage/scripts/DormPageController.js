@@ -17,8 +17,8 @@ angular
             $scope.dormAddrCode = $sce.trustAsResourceUrl(res.attributes.addrCode);
             $scope.ratelist = [{title:'Socialness', rate:res.attributes.socialness},
                 {title:'Room size',rate:res.attributes.roomsize},
-                {title:'Food',rate:res.attributes.Food},
-                {title:'Amenities',rate:res.attributes.Amenities},
+                {title:'Food',rate:res.attributes.food},
+                {title:'Amenities',rate:res.attributes.amenities},
                 {title:'Overall',rate:res.attributes.star}];
         });
 
