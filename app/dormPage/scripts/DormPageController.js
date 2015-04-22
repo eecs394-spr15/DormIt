@@ -29,7 +29,8 @@ angular
             });
             $scope.reviewList= commentList;
         })
-
+        $scope.screenHeight = screen.height * 0.7;
+        $scope.imageHeight = screen.height * 0.3;
     });
 
 
