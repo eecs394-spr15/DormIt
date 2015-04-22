@@ -17,9 +17,22 @@ angular.module('services', ['parse-angular'])
         };
 
         parseFactory.submitReview = function(review){
-            var submissions = Parse.Object.extend("reviews");
-            var sub = new submissions();
+            var dorm = new Parse.Query('dorms');
+            dorm.get(review.dorm).then(function(res){
+                var reviewCount = res.get('numReviews');
+                res.set('star', calcAverage(reviewCount, res.get('star'), review.overall));
+                res.set('socialness', calcAverage(reviewCount, res.get('socialness'), review.socialness));
+                res.set('roomsize', calcAverage(reviewCount, res.get('roomsize'), review.roomsize));
+                res.set('rowdiness', calcAverage(reviewCount, res.get('rowdiness'), review.rowdiness));
+                res.set('bathrooms', calcAverage(reviewCount, res.get('bathrooms'), review.bathrooms));
+                res.set('numReviews', reviewCount+1);
+                res.save()
+            });
+
+            var submission = Parse.Object.extend("reviews");
+            var sub = new submission();
             return sub.save(review);
+
         };
 
         parseFactory.getReviews = function(id){
@@ -29,6 +42,9 @@ angular.module('services', ['parse-angular'])
             return ratings;
         };
 
+        function calcAverage(count, o, n){
+            return ((o*count)+n)/(count+1);
+        }
         return parseFactory
 
     });
