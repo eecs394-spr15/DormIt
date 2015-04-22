@@ -25,6 +25,7 @@ angular
         parse.getReviews(dormId).then(function(res){
             var commentList = [];
             res.forEach(function(value){
+                value.attributes.timestamp = value.createdAt.toString().slice(4, 16);
                 commentList.push(value.attributes);
             });
             $scope.reviewList= commentList;
