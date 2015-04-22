@@ -4,8 +4,8 @@ angular
 
         $scope.review={
             dorm: steroids.view.params.id,
-            bathrooms:1,
-            rowdiness:1,
+            food:1,
+            amenities:1,
             roomsize:1,
             socialness:1,
             overall:1
