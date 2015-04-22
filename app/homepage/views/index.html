@@ -7,58 +7,59 @@
     </super-navbar-title>
   </super-navbar>
 
-  <div class="searchbar item item-input-inset">
-    <label class="item-input-wrapper">
-      <input ng-model="query.name" type="text" placeholder="Dorm Name">
-    </label>
-    <button class="clearButton" ng-click="clear()">
-      <div>Clear</div>
-    </button>
-    <button type="button" class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()"></button>
-  </div>
-
-  <div id="demo" class="collapse">
-    <ul>
-      <li class="choice item item-checkbox">
-        <strong>Location</strong>:
-        <input type="checkbox" ng-model="queryLoc['North']"> North
-        <input type="checkbox" ng-model="queryLoc['South']"> South
-      </li>
-
-      <li class="choice item item-checkbox">
-        <strong>Size</strong>:
-        <input type="checkbox" ng-model="querySize['Small']"> Small
-        <input type="checkbox" ng-model="querySize['Large']"> Large
-      </li>
-
-      <li class="choice item item-checkbox">
-        <strong>Type</strong>:
-        <input type="checkbox" ng-model="queryType['Residence Hall']"> Residence Hall
-        <input type="checkbox" ng-model="queryType['Residential College']"> Residential College
-      </li>
-
-      <li>
-        <div>
-          <div class="item range range-light">
-            <strong>Stars</strong>{{": "}}
-            <div><span ng-bind="queryStar"></span></div>
-            <input type="range" step="0.1" min="0" max="5" ng-model="queryStar">5
-          </div>
-        </div>
-      </li>
-
-      <li class="choice item">
-        <Strong>Sort:</Strong>
-        <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
-          <div>Price</div>
+    <div class="searchbar item item-input-inset">
+        <label class="item-input-wrapper">
+            <input ng-model="query.name" type="text" placeholder="Dorm Name">
+        </label>
+        <button class="clearButton" ng-click="clear()">
+            <div>Clear</div>
         </button>
-        <button class="sortButton" ng-class="{active:isSet(2)}" ng-click="sortByRating()">
-          <div>Rating</div>
-        </button>
-      </li>
+        <button type="button" class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()"></button>
+    </div>
 
-    </ul>
-  </div>
+    <div id="demo" class="collapse">
+        <ul>
+
+            <li class="choice item item-checkbox">
+                <div class="ftitle"><strong>Location</strong>:</div>
+                <input type="checkbox" ng-model="queryLoc['North']"> North
+                <input type="checkbox" ng-model="queryLoc['South']"> South
+            </li>
+
+            <li class="choice item item-checkbox">
+                <div class="ftitle"><strong>Size</strong>:</div>
+                <input type="checkbox" ng-model="querySize['Small']"> Small
+                <input type="checkbox" ng-model="querySize['Large']"> Large
+            </li>
+
+            <li class="choice item item-checkbox">
+                <div class="ftitle"><strong>Type</strong>:</div>
+                <input type="checkbox" ng-model="queryType['Residence Hall']"> Residence Hall
+                <input type="checkbox" ng-model="queryType['Residential College']"> Residential College
+            </li>
+
+            <li>
+                <div>
+                    <div class="item range range-light">
+                        <strong>Stars</strong>{{": "}}
+                        <div><span ng-bind="queryStar"></span></div>
+                        <input type="range" step="0.1" min="0" max="5" ng-model="queryStar">5
+                    </div>
+                </div>
+            </li>
+
+            <li class="choice item">
+                <div class="ftitle"><Strong>Sort:</Strong></div>
+                <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
+                    <div>Price</div>
+                </button>
+                <button class="sortButton" ng-class="{active:isSet(2)}" ng-click="sortByRating()">
+                    <div>Rating</div>
+                </button>
+            </li>
+
+        </ul>
+    </div>
 
   <ul>
     <li>

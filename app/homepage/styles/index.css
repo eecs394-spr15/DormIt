@@ -11,6 +11,10 @@
 {
     text-align:center;
 }
+.ftitle{
+    width:65px;
+    display:inline-block;
+}
 .sortButton
 {
     padding-top:5px;
