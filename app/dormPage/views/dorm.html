@@ -10,7 +10,7 @@
 
     
         <div class="images">
-            <img ng-src="{{dorm.img}}"/>
+            <img ng-src="{{dorm.img}}" height="{{imageHeight}}"/>
         </div>
         <div class="address">
             {{dorm.address | uppercase}}
@@ -143,7 +143,7 @@
             <div ng-show="isSet(2)">
                 <div class="padding">
                     <div id="googleMap" class="collapse">
-                        <embed ng-src="{{dormAddrCode}}" width="100%" height="50%"></embed>
+                        <embed class="gMap" ng-src="{{dormAddrCode}}" width="100%" height="{{screenHeight}}"></embed>
                     </div>
                 </div>
             </div>
