@@ -2,6 +2,7 @@ angular
     .module('homepage')
     .controller('IndexController', function($scope, supersonic, parse) {
 
+        $scope.iconstatus="super-refresh";
       $scope.sort = 0;
       $scope.isSet = function(tabName){
         return $scope.sort === tabName;
@@ -126,14 +127,18 @@ angular
           $scope.chevron = "super-chevron-down";
       };
     })
-    .directive("scroll", function ($window, $document) {
-      return function(scope, element, attrs) {
-        angular.element($window).bind("scroll", function() {
-          var height = $document[0].body.offsetHeight - this.innerHeight;
-          if (this.pageYOffset <=0 || this.pageYOffset >=  height) {
-            scope.refresh_dorm();
-          }
-          scope.$apply();
-        });
-      };
+    .directive("scroll", function ($window, $document,$timeout) {
+        return function(scope, element, attrs) {
+            angular.element($window).bind("scroll", function() {
+                var height = $document[0].body.offsetHeight - this.innerHeight;
+                if(this.pageYOffset >= height){
+                    scope.iconstatus = "super-refreshing";
+                    $timeout(function(){
+                        scope.iconstatus="super-refresh";
+                        $window.scrollBy(0,-3);
+                    },1250);
+                    scope.refresh_dorm();
+                };
+            });
+        };
     });

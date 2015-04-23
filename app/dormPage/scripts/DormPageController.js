@@ -1,6 +1,7 @@
 angular
     .module('dormPage')
-    .controller('DormPageController', function($scope, supersonic, parse, $sce) {
+    .controller('DormPageController', function($scope, supersonic, parse, $sce, $window) {
+        $scope.iconstatus="super-refresh";
 
         $scope.tab = 1;
         $scope.setTab = function (newValue) {
@@ -9,7 +10,6 @@ angular
         $scope.isSet = function (tabName) {
             return $scope.tab === tabName;
         };
-
         var dormId = steroids.view.params.id;
 
         parse.getDorm(dormId).then(function (res) {
@@ -76,14 +76,22 @@ angular
         };
     })
 
-    .directive("scroll", function ($window, $document) {
+    .directive("scroll", function ($window, $document,$timeout) {
         return function(scope, element, attrs) {
             angular.element($window).bind("scroll", function() {
                 var height = $document[0].body.offsetHeight - this.innerHeight;
-                if (this.pageYOffset <= 0) {
+                if(this.pageYOffset >= height){
+                    scope.iconstatus = "super-refreshing";
+                    $timeout(function(){
+                        scope.iconstatus="super-refresh";
+                        $window.scrollBy(0,-3);
+                    },1250);
                     scope.refresh_review();
-                }
-                scope.$apply();
+                    scope.$watch('reviewList.length', function(newValue,oldValue) {
+                        if(newValue>oldValue){
+                        $window.scrollTo(0,height+45)};
+                    })
+                };
             });
         };
     });

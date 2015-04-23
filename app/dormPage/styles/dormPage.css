@@ -38,6 +38,11 @@
     position: relative;
     bottom: -6px;
 }
+.refresh{
+    height:30px;
+    position:center;
+    text-align: center;
+}
 .address
 {
     font-size:15px;
