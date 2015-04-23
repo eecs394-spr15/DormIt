@@ -9,6 +9,11 @@
 {
     width: 100%;
 }
+.refresh{
+    height:30px;
+    position:center;
+    text-align: center;
+}
 .address
 {
     font-size:15px;
