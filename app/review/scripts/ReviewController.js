@@ -4,11 +4,11 @@ angular
 
         $scope.review={
             dorm: steroids.view.params.id,
-            food:1,
-            amenities:1,
-            roomsize:1,
-            socialness:1,
-            overall:1
+            food:.1,
+            amenities:.1,
+            roomsize:.1,
+            socialness:.1,
+            overall:.1
         };
         $scope.maxRating = 5;
 

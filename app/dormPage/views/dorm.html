@@ -8,12 +8,20 @@
 
     <link rel="stylesheet" href="styles/dormPage.css">
 
-    
         <div class="images">
-            <img ng-src="{{dorm.img}}" height="{{imageHeight}}"/>
+            <img ng-src="{{album[(displayIndex - 1)]}}" height="{{imageHeight}}"/>
+        </div>
+        <div class="picture-nav">
+            <button class="button icon-left super-chevron-left button-small button-stable prevbutton" ng-click="previousBtn()">
+                Previous
+            </button>
+            <button class="button icon-right super-chevron-right button-small button-stable nextbutton" ng-click="nextBtn()">
+                Next
+            </button>
+            <p>{{displayIndex}} / {{numPics}}</p>
         </div>
         <div class="address">
-            {{dorm.address | uppercase}}
+            <p>{{dorm.address | uppercase}}</p>
         </div>
 
         <section>
@@ -156,10 +164,10 @@
                             <p class="rating-data"><span static-star-rating rating-value="rating.rate" max="5"></span></p>
                         </li>
                     </ul>
-
                     <super-navigate view-id="review#review?id={{dorm.id}}" action="click">
                         <button class="button button-purple button-block">Post a review</button>
                     </super-navigate>
+
                     <div class="review-list">
                         <p class="review-title"><strong>Reviews</strong>:</p>
                         <div class="review-content">

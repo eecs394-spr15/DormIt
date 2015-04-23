@@ -32,7 +32,6 @@ angular.module('services', ['parse-angular'])
             var submission = Parse.Object.extend("reviews");
             var sub = new submission();
             return sub.save(review);
-
         };
 
         parseFactory.getReviews = function(id){
@@ -41,6 +40,12 @@ angular.module('services', ['parse-angular'])
             query.descending("createdAt");
             var ratings = query.find();
             return ratings;
+        };
+
+        parseFactory.getPictures = function(id){
+            var query = new Parse.Query('pictures');
+            query.equalTo("dorm", id);
+            return query.find();
         };
 
         function calcAverage(count, o, n){

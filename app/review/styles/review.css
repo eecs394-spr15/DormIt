@@ -5,7 +5,7 @@
 .caption
 {
     margin: 8px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 5px;
     font-size: 14px;
     color: black;
@@ -30,9 +30,13 @@
 }
 .rating
 {
-    padding-left:8px;
+    text-align:center;
 }
-
+.rating li
+{
+    padding: 8px;
+    font-size: 20px;
+}
 .submit
 {
     margin: 16px;
@@ -40,4 +44,3 @@
     align-content: center;
     text-align: center;
 }
-

@@ -17,7 +17,7 @@ angular.module('directives',[]).directive('starRating', function () {
                 scope.stars = [];
                 for (var i = 0; i < scope.max; i++) {
                     scope.stars.push({
-                        filled: i < scope.ratingValue
+                        filled: i < Math.round(scope.ratingValue)
                     });
                 }
             };
