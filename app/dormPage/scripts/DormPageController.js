@@ -11,6 +11,7 @@ angular
         };
 
         var dormId = steroids.view.params.id;
+
         parse.getDorm(dormId).then(function (res) {
             $scope.dorm = res.attributes;
             $scope.dorm.id = res.id;
@@ -31,10 +32,40 @@ angular
                  });
                  $scope.reviewList= commentList;
         })};
+
         $scope.refresh_review();
 
         $scope.screenHeight = screen.height * 0.7;
-        $scope.imageHeight = screen.height * 0.3;
+        $scope.imageHeight = screen.height * 0.35;
+
+        $scope.numPics = 10;
+        $scope.displayIndex = 1;
+
+        $scope.album = [];
+
+        parse.getPictures(dormId).then(function(results) {
+            for (var i = 0; i < results.length; i++) {
+                var pics = results[i];
+
+                for (var idx = 1; idx < 11; idx++) {
+                    var iStr = "img" + idx;
+                    $scope.album[(idx - 1)] = pics.get(iStr);
+                }
+            }
+        });
+
+
+        $scope.previousBtn = function() {
+            if ($scope.displayIndex > 1) {
+                $scope.displayIndex -= 1;
+            }
+        };
+
+        $scope.nextBtn = function() {
+            if ($scope.displayIndex < $scope.numPics) {
+                $scope.displayIndex +=1;
+            }
+        };
     })
 
     .directive("scroll", function ($window, $document) {

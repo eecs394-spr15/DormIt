@@ -43,6 +43,23 @@ angular.module('services', ['parse-angular'])
             return ratings;
         };
 
+        parseFactory.getPictures = function(id){
+            var query = new Parse.Query('pictures');
+            query.equalTo("dorm", id);
+            return query.find(/*{
+                success: function(results) {
+                    alert("Successfully retrieved " + results.length + " album.");
+                    for (var i = 0; i < results.length; i++) {
+                        var pics = results[i];
+                        alert(pics.get("img1") + " to be displayed.");
+                    }
+                },
+                error: function(error) {
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            }*/);
+        };
+
         function calcAverage(count, o, n){
             return ((o*count)+n)/(count+1);
         }

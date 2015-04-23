@@ -1,6 +1,5 @@
 .images
 {
-    vertical-align: bottom;
     overflow: hidden;
     width: 100%;
     text-align: center;
@@ -9,19 +8,28 @@
 {
     width: 100%;
 }
+.picture-nav
+{
+    text-align: center;
+    margin: 4px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
 .address
 {
     font-size:15px;
     color: #585858;
     font-style: italic;
-    padding-top:5px;
-    padding-left:8px;
+    display: inline-block;
+    white-space: nowrap;
+    align-content: center;
+    padding-top:12px;
+    padding-left: 10px;
 }
 .tab
 {
     position:relative;
-    background: purple;
-    padding: 10px;
+    background: #4e015c;
     border: 1px solid #ccc;
 }
 .active
@@ -37,7 +45,7 @@
 }
 .active div
 {
-    color:purple;
+    color:#4e015c;
 }
 .infolist
 {
