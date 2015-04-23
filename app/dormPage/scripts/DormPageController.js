@@ -23,15 +23,15 @@ angular
                 {title: 'Overall', rate: res.attributes.star}];
         });
 
-         $scope.refresh_review = function(){
-             parse.getReviews(dormId).then(function(res){
-                 var commentList = [];
-                 res.forEach(function(value){
-                     value.attributes.timestamp = value.createdAt.toString().slice(4, 16);
-                     commentList.push(value.attributes);
-                 });
-                 $scope.reviewList= commentList;
-        })};
+        $scope.refresh_review = function(){
+            parse.getReviews(dormId).then(function(res){
+                var commentList = [];
+                res.forEach(function(value){
+                    value.attributes.timestamp = value.createdAt.toString().slice(4, 16);
+                    commentList.push(value.attributes);
+                });
+                $scope.reviewList= commentList;
+            })};
 
         $scope.refresh_review();
 
@@ -57,16 +57,21 @@ angular
             }
         });
 
-
         $scope.previousBtn = function() {
             if ($scope.displayIndex > 1) {
                 $scope.displayIndex -= 1;
+            }
+            else {
+                $scope.displayIndex = $scope.numPics;
             }
         };
 
         $scope.nextBtn = function() {
             if ($scope.displayIndex < $scope.numPics) {
                 $scope.displayIndex +=1;
+            }
+            else {
+                $scope.displayIndex = 1;
             }
         };
     })
