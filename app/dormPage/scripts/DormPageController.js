@@ -38,7 +38,7 @@ angular
         $scope.screenHeight = screen.height * 0.7;
         $scope.imageHeight = screen.height * 0.35;
 
-        $scope.numPics = 10;
+        $scope.numPics = 0;
         $scope.displayIndex = 1;
 
         $scope.album = [];
@@ -49,7 +49,10 @@ angular
 
                 for (var idx = 1; idx < 11; idx++) {
                     var iStr = "img" + idx;
-                    $scope.album[(idx - 1)] = pics.get(iStr);
+                    if (pics.get(iStr) != undefined) {
+                        $scope.album[(idx - 1)] = pics.get(iStr);
+                        $scope.numPics += 1;
+                    }
                 }
             }
         });
