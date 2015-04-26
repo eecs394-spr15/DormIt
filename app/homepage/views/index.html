@@ -38,16 +38,6 @@
                 <input type="checkbox" ng-model="queryType['Residential College']"> Residential College
             </li>
 
-            <li>
-                <div>
-                    <div class="item range range-light">
-                        <strong>Stars</strong>{{": "}}
-                        <div><span ng-bind="queryStar"></span></div>
-                        <input type="range" step="0.1" min="0" max="5" ng-model="queryStar">5
-                    </div>
-                </div>
-            </li>
-
             <li class="choice item">
                 <div class="ftitle"><Strong>Sort:</Strong></div>
                 <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
