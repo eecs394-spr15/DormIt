@@ -20,26 +20,26 @@
     <div id="demo" class="collapse">
         <ul>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Location</strong>:</div>
-                <input type="checkbox" ng-model="queryLoc['North']"> North
-                <input type="checkbox" ng-model="queryLoc['South']"> South
+            <li class="choice item item-checkbox filterop">
+                <div class="ftitle"><span style="display: inline-block; width: 80px;"><strong>Location</strong>:</span>
+                <span style="display: inline-block; width: 90px;"><input type="checkbox" ng-model="queryLoc['North']"> North</span>
+                <input type="checkbox" ng-model="queryLoc['South']"> South</div>
             </li>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Size</strong>:</div>
-                <input type="checkbox" ng-model="querySize['Small']"> Small
+            <li class="choice item item-checkbox filterop">
+                <div class="ftitle"><span style="display: inline-block; width: 80px;"><strong>Size</strong>:</span>
+                <span style="display: inline-block; width: 90px;"><input type="checkbox" ng-model="querySize['Small']"> Small</span>
                 <input type="checkbox" ng-model="querySize['Large']"> Large
             </li>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Type</strong>:</div>
-                <input type="checkbox" ng-model="queryType['Residence Hall']"> Residence Hall
-                <input type="checkbox" ng-model="queryType['Residential College']"> Residential College
+            <li class="choice item item-checkbox filterop">
+                <div class="ftitle"><span style="display: inline-block; width: 80px;"><strong>Type</strong>:</span>
+                <span style="display: inline-block; width: 90px;"><input type="checkbox" ng-model="queryType['Residence Hall']"> Res. Hall</span>
+                <input type="checkbox" ng-model="queryType['Residential College']"> Res. College
             </li>
 
-            <li class="choice item">
-                <div class="ftitle"><Strong>Sort:</Strong></div>
+            <li class="choice item filterop">
+                <div class="ftitle"><span style="display: inline-block; width: 80px;"><strong>Sort</strong>:</span>
                 <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
                     <div>Price</div>
                 </button>
