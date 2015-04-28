@@ -39,15 +39,18 @@
             </li>
 
             <li class="choice item">
-                <div class="ftitle"><Strong>Sort:</Strong></div>
+                <div class="ftitle"><Strong>Sort By:</Strong></div>
                 <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
-                    <div>Price</div>
+                    <div ng-show="priceOrder === -1 ||sort === 2">Price</div>
+                    <div ng-show="priceOrder === 0 && sort === 1">Price <span class="super-arrow-down-b"></span></div>
+                    <div ng-show="priceOrder === 1 && sort === 1">Price <span class="super-arrow-up-b"></span></div>
                 </button>
                 <button class="sortButton" ng-class="{active:isSet(2)}" ng-click="sortByRating()">
-                    <div>Rating</div>
+                    <div ng-show="ratingOrder === -1 ||sort === 1">Rating</div>
+                    <div ng-show="ratingOrder === 0 && sort === 2">Rating <span class="super-arrow-down-b"></span></div>
+                    <div ng-show="ratingOrder === 1 && sort === 2">Rating <span class="super-arrow-up-b"></span></div>
                 </button>
             </li>
-
         </ul>
     </div>
 
