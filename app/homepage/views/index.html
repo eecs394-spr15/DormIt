@@ -6,7 +6,7 @@
       DormIt
     </super-navbar-title>
   </super-navbar>
-
+    <div class="button-block button-clear refresh" ng-show="iconstatus"><i class="icon iconhide super-refreshing"></i></div>
     <div class="searchbar item item-input-inset">
         <label class="item-input-wrapper">
             <input ng-model="query.name" type="text" placeholder="Dorm Name">
@@ -75,7 +75,6 @@
     <h4>Oops! No dorms found...</h4>
     <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=9374089" width = "100">
   </div>
-    <button class="button-block button-clear refresh"><i class="icon" ng-class="iconstatus">Refresh</i></button>
 </div>
 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>

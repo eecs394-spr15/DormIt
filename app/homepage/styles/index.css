@@ -16,6 +16,14 @@
     text-align: center;
     padding-bottom:10px;
 }
+.iconhide{
+    background-size:15px;
+}
+.ftitle{
+    width:65px;
+    font-size: 15px;
+    display:inline-block;
+}
 .sortButton
 {
     display: inline-block;

@@ -12,6 +12,7 @@ angular
         };
         var dormId = steroids.view.params.id;
 
+        $scope.refresh_star = function(){
         parse.getDorm(dormId).then(function (res) {
             $scope.dorm = res.attributes;
             $scope.dorm.id = res.id;
@@ -21,7 +22,9 @@ angular
                 {title: 'Food', rate: res.attributes.food},
                 {title: 'Amenities', rate: res.attributes.amenities},
                 {title: 'Overall', rate: res.attributes.star}];
-        });
+        })};
+
+        $scope.refresh_star();
 
         $scope.refresh_review = function(){
             parse.getReviews(dormId).then(function(res){
@@ -86,6 +89,7 @@ angular
                         scope.iconstatus="super-refresh";
                         $window.scrollBy(0,-3);
                     },1250);
+                    scope.refresh_star();
                     scope.refresh_review();
                     scope.$watch('reviewList.length', function(newValue,oldValue) {
                         if(newValue>oldValue){
