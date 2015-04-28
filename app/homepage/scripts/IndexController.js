@@ -2,7 +2,7 @@ angular
     .module('homepage')
     .controller('IndexController', function($scope, supersonic, parse) {
 
-        $scope.iconstatus="super-refresh";
+        $scope.iconstatus = 0;
       $scope.sort = 0;
       $scope.isSet = function(tabName){
         return $scope.sort === tabName;
@@ -141,11 +141,11 @@ angular
         return function(scope, element, attrs) {
             angular.element($window).bind("scroll", function() {
                 var height = $document[0].body.offsetHeight - this.innerHeight;
-                if(this.pageYOffset >= height){
-                    scope.iconstatus = "super-refreshing";
+                if(this.pageYOffset <= 0){
+                    scope.iconstatus = 1;
                     $timeout(function(){
-                        scope.iconstatus="super-refresh";
-                        $window.scrollBy(0,-3);
+                        scope.iconstatus=0;
+                        $window.scrollBy(0,1);
                     },1250);
                     scope.refresh_dorm();
                 };
