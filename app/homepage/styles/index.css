@@ -19,6 +19,7 @@
 }
 .ftitle{
     width:65px;
+    font-size: 15px;
     display:inline-block;
 }
 .sortButton
@@ -41,6 +42,10 @@
     font-size:15px;
     color: purple;
     border: 1px #E8E8E8;
+}
+.check
+{
+    padding-left:10px;
 }
 .searchbar
 {
