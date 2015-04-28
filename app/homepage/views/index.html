@@ -20,37 +20,38 @@
     <div id="demo" class="collapse">
         <ul>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Location</strong>:</div>
-                <input type="checkbox" ng-model="queryLoc['North']"> North
-                <input type="checkbox" ng-model="queryLoc['South']"> South
+            <li class="row">
+                <div class="col col-33"><strong>Location</strong>:</div>
+                <div class="col col-33"><input type="checkbox" ng-model="queryLoc['North']"> North</div>
+                <div class="col col-33"><input type="checkbox" ng-model="queryLoc['South']"> South</div>
             </li>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Size</strong>:</div>
-                <input type="checkbox" ng-model="querySize['Small']"> Small
-                <input type="checkbox" ng-model="querySize['Large']"> Large
+            <li class="row">
+                <div class="col col-33"><strong>Size</strong>:</div>
+                <div class="col col-33"><input type="checkbox" ng-model="querySize['Small']"> Small</div>
+                <div class="col col-33"><input type="checkbox" ng-model="querySize['Large']"> Large</div>
             </li>
 
-            <li class="choice item item-checkbox">
-                <div class="ftitle"><strong>Type</strong>:</div>
-                <input type="checkbox" ng-model="queryType['Residence Hall']"> Res Hall
-                <input type="checkbox" ng-model="queryType['Residential College']"> Res College
+            <li class="row">
+                <div class="col col-33"><strong>Type</strong>:</div>
+                <div class="col col-33"><input type="checkbox" ng-model="queryType['Residence Hall']"> Res. Hall</div>
+                <div class="col col-33"><input type="checkbox" ng-model="queryType['Residential College']"> Res. College</div>
             </li>
 
-            <li class="choice item">
-                <div class="ftitle"><Strong>Sort By:</Strong></div>
-                <button class="sortButton" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
+            <li class="row">
+                <div class="col col-33"><strong>Sort by</strong>:</div>
+                <button class="sortButton col col-33" ng-class="{active:isSet(1)}" ng-click="sortByPrice()">
                     <div ng-show="priceOrder === -1 ||sort === 2">Price</div>
                     <div ng-show="priceOrder === 0 && sort === 1">Price <span class="super-arrow-down-b"></span></div>
                     <div ng-show="priceOrder === 1 && sort === 1">Price <span class="super-arrow-up-b"></span></div>
                 </button>
-                <button class="sortButton" ng-class="{active:isSet(2)}" ng-click="sortByRating()">
+                <button class="sortButton col col-33" ng-class="{active:isSet(2)}" ng-click="sortByRating()">
                     <div ng-show="ratingOrder === -1 ||sort === 1">Rating</div>
                     <div ng-show="ratingOrder === 0 && sort === 2">Rating <span class="super-arrow-down-b"></span></div>
                     <div ng-show="ratingOrder === 1 && sort === 2">Rating <span class="super-arrow-up-b"></span></div>
                 </button>
             </li>
+
         </ul>
     </div>
 

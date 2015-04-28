@@ -2,10 +2,9 @@
 {
     padding:3px 3px 3px 3px;
 }
-
-.choice
+#demo
 {
-    padding-left:10px;
+    padding-left: 8px;
 }
 .nofound
 {
@@ -17,16 +16,14 @@
     text-align: center;
     padding-bottom:10px;
 }
-.ftitle{
-    width:65px;
-    font-size: 15px;
-    display:inline-block;
-}
 .sortButton
 {
     display: inline-block;
-    width: 85px;
+    height: 30px;
+    width: 65px;
+    margin-right: 8px;
     border-color: #4e015c;
+    border-radius: 4px;
     background-color: white;
     color: #4e015c;
 }
@@ -39,10 +36,6 @@
     font-size:15px;
     color: purple;
     border: 1px #E8E8E8;
-}
-.check
-{
-    padding-left:10px;
 }
 .searchbar
 {
