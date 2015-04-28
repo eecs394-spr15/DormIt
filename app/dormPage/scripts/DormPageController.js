@@ -89,9 +89,9 @@ angular
                     scope.refresh_review();
                     scope.$watch('reviewList.length', function(newValue,oldValue) {
                         if(newValue>oldValue){
-                        $window.scrollTo(0,height+45)};
+                        $window.scrollTo(0,height+45)}
                     })
-                };
+                }
             });
         };
     });
