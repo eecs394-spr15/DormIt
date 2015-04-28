@@ -25,6 +25,9 @@ angular
         return el1[index] == el2[index] ? 0 : (el1[index] < el2[index] ? -1 : 1);
       }
 
+      $scope.priceOrder = -1;
+      $scope.ratingOrder = -1
+
       $scope.sortByPrice = function() {
         $scope.sort = 1;
         $scope.reverse = !$scope.reverse;
@@ -37,6 +40,7 @@ angular
               return 1;
             return 0;
           });
+          $scope.priceOrder = 0;
         }
         else {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -47,6 +51,7 @@ angular
               return -1;
             return 0;
           });
+          $scope.priceOrder = 1;
         }
       };
 
@@ -62,6 +67,7 @@ angular
               return 1;
             return 0;
           });
+          $scope.ratingOrder = 0;
         }
         else {
           $scope.dormList = $scope.dormList.sort(function (a, b) {
@@ -72,6 +78,7 @@ angular
               return -1;
             return 0;
           });
+          $scope.ratingOrder = 1;
         }
       };
 
