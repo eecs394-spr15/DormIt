@@ -11,10 +11,11 @@
         <label class="item-input-wrapper">
             <input ng-model="query.name" type="text" placeholder="Dorm Name">
         </label>
-        <button class="clearButton" ng-click="clear()">
+        <button class="button button-small button-light clearButton" ng-click="clear()">
             <div>Clear</div>
         </button>
-        <button type="button" class="button button-clear" data-toggle="collapse" data-target="#demo" ng-class="chevron" ng-click="switchButton()"></button>
+        <button type="button" class="button button-clear button-outline button-positive button-small button-royal" data-toggle="collapse" data-target="#demo" ng-click="switchButton()">
+            Filter <span ng-class="chevron"></span></button>
     </div>
 
     <div id="demo" class="collapse">

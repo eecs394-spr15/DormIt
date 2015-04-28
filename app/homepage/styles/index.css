@@ -29,13 +29,13 @@
 }
 .clearButton
 {
-    padding-top:5px;
-    padding-bottom:25px;
-    width:50px;
-    height:20px;
-    font-size:15px;
-    color: purple;
-    border: 1px #E8E8E8;
+    padding-left:8px;
+    padding-right:8px;
+    color: white !important;
+    background: purple !important;
+}
+.clearButton:active{
+    color: white;
 }
 .searchbar
 {

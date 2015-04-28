@@ -83,10 +83,13 @@ angular
       };
 
       $scope.clear = function() {
+        $scope.ratingOrder = -1;
+        $scope.priceOrder = -1;
         $scope.sort = 0;
         $scope.queryLoc = {};
         $scope.querySize = {};
         $scope.queryType = {};
+        $scope.query.name='';
         $scope.dormList = $scope.dormList.sort(function (a, b) {
           var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase();
           if (nameA < nameB)
